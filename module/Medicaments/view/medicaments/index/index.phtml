@@ -1,1 +1,18 @@
 Action "index", controller "Index", module "Medicaments".
+<br />
+
+<?php echo $this->translate('Configuration file'); ?>
+
+<?php
+    $form = $this->form;
+    // Setting the URL for the form's action
+    $form->setAttribute('action', $this->url('medicaments', array('action' => 'changeConfiguration')));
+	$form->prepare();
+	echo $this->form()->openTag($form);
+	echo $this->formRow($form->get('filetype'));
+	echo '<br />';
+	echo $this->formSubmit($form->get('submit'));
+	// Alternative method: replace everything between openTag and closeTag with $this->formCollection($form);
+	echo $this->form()->closeTag();
+	echo '<pre>'; var_dump($this->session->file); echo '</pre>';
+?>

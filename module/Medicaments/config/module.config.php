@@ -17,9 +17,13 @@ return array(
             // module. Simply drop new controllers in, and you can access them
             // using the path /medicaments/:controller/:action
             'medicaments' => array(
-                'type'    => 'Literal',
+                'type'    => 'segment',
                 'options' => array(
-                    'route'    => '/medicaments',
+                    'route'    => '/medicaments[/:action][/:id]',
+                    'constraints' => array(
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id'     => '[0-9]+',
+                    ),
                     'defaults' => array(
                         '__NAMESPACE__' => 'Medicaments\Controller',
                         'controller'    => 'Index',
@@ -76,7 +80,7 @@ return array(
         'exception_template'       => 'error/index',
         'template_map' => array(
             'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
-            'Medicaments/index/index' => __DIR__ . '/../view/Medicaments/index/index.phtml',
+            'medicaments/index/index' => __DIR__ . '/../view/medicaments/index/index.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml',
         ),
