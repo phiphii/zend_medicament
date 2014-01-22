@@ -9,6 +9,7 @@ use Medicaments\Form\ConfigurationForm;
 
 class IndexController extends AbstractActionController
 {
+	protected $medicamentsTable;
 
     public function indexAction()
     {
@@ -20,6 +21,7 @@ class IndexController extends AbstractActionController
 		        		array(
 		        			'form' => $form,
 		        			'session' => $session,
+		        			'medicaments' => $this->getMedicamentsTable()->fetchAll(),
 	        			)
 		        	);
     }
@@ -36,8 +38,9 @@ class IndexController extends AbstractActionController
             if ($form->isValid())
             {
             	// Setting the file selected into session
-            	$session = new Container('configuration');
-				$session->file = $request->getPost()->filetype;
+				$session              = new Container('configuration');
+				$session->file        = $request->getPost()->filetype;
+				$session->environment = $request->getPost()->environment;
                 // Redirect to index action
                 return $this->redirect()->toRoute('medicaments');
             }
@@ -45,6 +48,13 @@ class IndexController extends AbstractActionController
         return array('session' => $session, 'form' => $form);
     }
 
-
+    public function getMedicamentsTable()
+    {
+        if (!$this->medicamentsTable) {
+            $serviceManager = $this->getServiceLocator();
+            $this->medicamentsTable = $serviceManager->get('Medicaments\Model\MedicamentsTable');
+        }
+        return $this->medicamentsTable;
+    }
 }
 
