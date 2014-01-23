@@ -28,13 +28,13 @@ class Module
     {
         return array(
             'factories' => array(
-                'Medicaments\Model\MedicamentsTable' =>  function($sm) {
-                    $tableGateway = $sm->get('MedicamentsTableGateway');
+                'Medicaments\Model\MedicamentsTable' =>  function($serviceManager) {
+                    $tableGateway = $serviceManager->get('MedicamentsTableGateway');
                     $table        = new MedicamentsTable($tableGateway);
                     return $table;
                 },
-                'MedicamentsTableGateway' => function ($sm) {
-                    $dbAdapter          = $sm->get('Zend\Db\Adapter\Adapter');
+                'MedicamentsTableGateway' => function ($serviceManager) {
+                    $dbAdapter          = $serviceManager->get('Zend\Db\Adapter\Adapter');
                     $resultSetPrototype = new ResultSet();
                     $resultSetPrototype->setArrayObjectPrototype(new Medicaments());
                     return new TableGateway('medicaments', $dbAdapter, null, $resultSetPrototype);

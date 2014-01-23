@@ -1,0 +1,38 @@
+{
+	"dev":{
+		"webhost": "localhost",
+		"database":{
+			"adapter": "pdo_mysql",
+			"params":{
+				"host": "localhost",
+				"dbname": "projet_zend_dev",
+				"user": "root",
+				"password": "root"
+			}
+		}
+	},
+	"recette":{
+		"webhost": "localhost",
+		"database":{
+			"adapter": "pdo_mysql",
+			"params":{
+				"host": "localhost",
+				"dbname": "projet_zend_recette",
+				"user": "root",
+				"password": "root"
+			}
+		}
+	},
+	"production":{
+		"webhost": "localhost",
+		"database":{
+			"adapter": "pdo_mysql",
+			"params":{
+				"host": "localhost",
+				"dbname": "projet_zend",
+				"user": "root",
+				"password": "root"
+			}
+		}
+	}
+}
