@@ -7,24 +7,14 @@ use Zend\View\Model\ViewModel;
 use Zend\Session\Container;
 use Medicaments\Form\ConfigurationForm;
 
-class IndexController extends AbstractActionController
+class ConfigurationController extends AbstractActionController
 {
-    // var medicamentsTable needed in order to use database
-	protected $medicamentsTable;
+	// var configurationTable needed in order to use database
+	protected $configurationTable;
 
     public function indexAction()
     {
-    	$form = new ConfigurationForm();
-        $form->get('submit')->setValue('Ok');
-        // Initialize Zend\Session container in order to send it to our view
-        $session = new Container('configuration');
-        return new ViewModel(
-		        		array(
-		        			'form' => $form,
-		        			'session' => $session,
-		        			'medicaments' => $this->getMedicamentsTable()->fetchAll(),
-	        			)
-		        	);
+        return new ViewModel();
     }
 
     public function changeConfigurationAction()
@@ -49,13 +39,15 @@ class IndexController extends AbstractActionController
         return array('session' => $session, 'form' => $form);
     }
 
-    public function getMedicamentsTable()
+    public function getConfigurationTable()
     {
-        if (!$this->medicamentsTable) {
+        if (!$this->configurationTable) {
             $serviceManager = $this->getServiceLocator();
-            $this->medicamentsTable = $serviceManager->get('Medicaments\Model\MedicamentsTable');
+            $this->configurationTable = $serviceManager->get('Medicaments\Model\ConfigurationTable');
         }
-        return $this->medicamentsTable;
+        return $this->configurationTable;
     }
+
+
 }
 

@@ -8,13 +8,12 @@ Action "index", controller "Index", module "Medicaments".
 $form->setAttribute('action', $this->url('medicaments', array('action' => 'changeConfiguration')));
 $form->prepare();
 echo $this->form()->openTag($form);
-echo $this->formRow($form->get('filetype'));
+echo $this->formRow($form->get('config_file'));
 echo $this->formRow($form->get('environment'));
 echo '<br />';
 echo $this->formSubmit($form->get('submit'));
 // Alternative method: replace everything between openTag and closeTag with $this->formCollection($form);
 echo $this->form()->closeTag();
-
 
 // List all drugs
 ?>

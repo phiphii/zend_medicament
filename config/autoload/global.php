@@ -16,9 +16,9 @@ use Zend\Debug\Debug;
 
 $session = new Container('configuration');
 
-if($session->offsetExists('file'))
+if($session->offsetExists('config_file'))
 {
-	switch ($session->file) {
+	switch ($session->config_file) {
 		case 'php':
 			$data = new Zend\Config\Config(require 'config/config.php');
 			break;

@@ -16,7 +16,7 @@ class ConfigurationForm extends Form
         // Ajout de la liste déroulante et du bouton d'envoi
         $this->add(array(
              'type' => 'Zend\Form\Element\Select',
-             'name' => 'filetype',
+             'name' => 'config_file',
              'options' => array(
                           'value_options' => array(
                                                  'php' => 'php',

@@ -3,7 +3,7 @@ namespace Medicaments\Model;
 
 use Zend\Db\TableGateway\TableGateway;
 
-class MedicamentsTable
+class ConfigurationTable
 {
     protected $tableGateway;
 
@@ -18,7 +18,7 @@ class MedicamentsTable
         return $resultSet;
     }
 
-    public function getMedicament($id)
+    public function getConfiguration($id)
     {
         $id     = (int) $id;
         $rowset = $this->tableGateway->select(array('id' => $id));
@@ -30,13 +30,14 @@ class MedicamentsTable
         return $row;
     }
 
-    public function saveMedicament(Medicaments $medicament)
+    public function saveConfiguration(Configuration $configuration)
     {
         $data = array(
-                    'name' => $medicament->name,
+                    'config_file' => $configuration->config_file,
+                    'environment' => $configuration->environment,
                 );
 
-        $id = (int)$medicament->id;
+        $id = (int)$configuration->id;
 
         if ($id == 0)
         {
@@ -44,7 +45,7 @@ class MedicamentsTable
         }
         else
         {
-            if ($this->getMedicament($id))
+            if ($this->getConfiguration($id))
             {
                 $this->tableGateway->update($data, array('id' => $id));
             }
@@ -55,7 +56,7 @@ class MedicamentsTable
         }
     }
 
-    public function deleteMedicament($id)
+    public function deleteConfiguration($id)
     {
         $this->tableGateway->delete(array('id' => $id));
     }
