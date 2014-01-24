@@ -1,14 +1,34 @@
-<?php echo $this->translate('Configuration file'); ?>
+<?php
+$title = 'Configuration file';
+$this->headTitle($title);
+echo '<h1>' . $this->escapeHtml($title) . '</h1>';
+?>
+
 
 <?php
-// Setting the URL for the form's action
-$form->setAttribute('action', $this->url('configuration', array('action' => 'changeConfiguration')));
-$form->prepare();
-echo $this->form()->openTag($form);
-echo $this->formRow($form->get('config_file'));
-echo $this->formRow($form->get('environment'));
-echo '<br />';
-echo $this->formSubmit($form->get('submit'));
-// Alternative method: replace everything between openTag and closeTag with $this->formCollection($form);
-echo $this->form()->closeTag();
+// List all drugs
 ?>
+<table class="table table-bordered table-striped">
+<tr>
+    <th>File type</th>
+    <th>Environment</th>
+    <th>&nbsp;</th>
+</tr>
+<?php
+foreach ($configurations as $configuration)
+{
+?>
+	<tr>
+		<td><?php echo $this->escapeHtml($configuration->config_file);?></td>
+		<td><?php echo $this->escapeHtml($configuration->environment);?></td>
+	    <td>
+	    	<form action="<?php echo $this->url('configuration', array('action' => 'changeConfiguration')); ?>" method="post">
+	    		<input type="hidden" name="id" value="<?php echo (int)$configuration->id; ?>" />
+	    		<input type="hidden" name="config_file" value="<?php echo $configuration->config_file; ?>" />
+	    		<input type="hidden" name="environment" value="<?php echo $configuration->environment; ?>" />
+		    	<input type="submit" name="use" value="<?php echo $this->translate('Use this file'); ?>" />
+		    </form>
+	    </td>
+	</tr>
+<?php } ?>
+</table>

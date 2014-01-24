@@ -12,6 +12,11 @@ class ConfigurationController extends AbstractActionController
 	// var configurationTable needed in order to use database
 	protected $configurationTable;
 
+
+    /*
+     * OLD FUNCTIONS (Used with select instead of table)
+     */
+    /*
     public function indexAction()
     {
         $form = new ConfigurationForm();
@@ -19,6 +24,7 @@ class ConfigurationController extends AbstractActionController
         return new ViewModel(
                         array(
                             'form' => $form,
+                            'configurations' => $this->getConfigurationTable()->fetchAll()
                         ));
     }
 
@@ -40,6 +46,39 @@ class ConfigurationController extends AbstractActionController
             }
         }
         return array('session' => $session, 'form' => $form);
+    }
+    */
+
+    public function indexAction()
+    {
+        return new ViewModel(
+                        array(
+                            'configurations' => $this->getConfigurationTable()->fetchAll()
+                        ));
+    }
+
+    public function changeConfigurationAction()
+    {
+        $request = $this->getRequest();
+        if($request->isPost())
+        {
+            $id = (int)$request->getPost('id');
+            if (!$id)
+            {
+                return $this->redirect()->toRoute('configuration');
+            }
+
+            $session              = new Container('configuration');
+            $session->config_file = $request->getPost()->config_file;
+            $session->environment = $request->getPost()->environment;
+
+            // Redirect to list of drugs
+            return $this->redirect()->toRoute('medicaments');
+        }
+
+        return array(
+            'id'    => $id,
+        );
     }
 
     public function getConfigurationTable()

@@ -1,7 +1,12 @@
-Action "index", controller "Index", module "Medicaments".
-<br />
+<?php
+$title = 'Add new drug';
+$this->headTitle($title);
+echo '<h1>' . $this->escapeHtml($title) . '</h1>';
+?>
 
-<?php // List all drugs ?>
+<?php
+// List all drugs
+?>
 <table class="table table-bordered table-striped">
 <tr>
     <th>ID</th>
@@ -30,4 +35,7 @@ foreach ($medicaments as $medicament)
 <?php } ?>
 </table>
 
+<?php
+// Add new drug
+?>
 <a href="<?php echo $this->url('medicaments', array('action' => 'add')); ?>"><?php echo $this->translate('Add new drug'); ?></a>
