@@ -9,8 +9,8 @@ class Configuration
 
     public function exchangeArray($data)
     {
-		$this->id   = (isset($data['id'])) ? $data['id'] : null;
-		$this->name = (isset($data['config_file'])) ? $data['config_file'] : null;
-		$this->name = (isset($data['environment'])) ? $data['environment'] : null;		
+		$this->id          = (isset($data['id'])) ? $data['id'] : null;
+		$this->config_file = (isset($data['config_file'])) ? $data['config_file'] : null;
+		$this->environment = (isset($data['environment'])) ? $data['environment'] : null;
     }
 }

@@ -5,7 +5,7 @@ namespace Medicaments\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Zend\Session\Container;
-use Medicaments\Form\ConfigurationForm;
+use Medicaments\Form\MedicamentForm;
 
 class IndexController extends AbstractActionController
 {
@@ -14,39 +14,77 @@ class IndexController extends AbstractActionController
 
     public function indexAction()
     {
-    	$form = new ConfigurationForm();
-        $form->get('submit')->setValue('Ok');
         // Initialize Zend\Session container in order to send it to our view
         $session = new Container('configuration');
         return new ViewModel(
 		        		array(
-		        			'form' => $form,
 		        			'session' => $session,
 		        			'medicaments' => $this->getMedicamentsTable()->fetchAll(),
 	        			)
 		        	);
     }
 
-    public function changeConfigurationAction()
+    public function editAction()
     {
-    	$form = new ConfigurationForm();
-        $form->get('submit')->setValue('Ok');
+        $id = (int)$this->params()->fromRoute('id', 0);
+        if(!$id)
+        {
+            return $this->redirect()->toRoute('medicaments');
+        }
+        $medicament = $this->getMedicamentsTable()->getMedicament($id);
+
+        $form  = new MedicamentForm();
+        // The method bind() attaches the model to the form
+        $form->bind($medicament);
+        $form->get('submit')->setAttribute('value', 'Edit');
 
         $request = $this->getRequest();
-        if ($request->isPost())
-        {
+        if ($request->isPost()) {
             $form->setData($request->getPost());
-            if ($form->isValid())
-            {
-            	// Setting the file selected into session
-                $session              = new Container('configuration');
-                $session->config_file = $request->getPost()->config_file;
-                $session->environment = $request->getPost()->environment;
-                // Redirect to index action
+
+            if ($form->isValid()) {
+                $this->getMedicamentsTable()->saveMedicament($form->getData());
+
+                // Redirect to list of albums
                 return $this->redirect()->toRoute('medicaments');
             }
         }
-        return array('session' => $session, 'form' => $form);
+
+        return array(
+            'id'   => $id,
+            'form' => $form,
+        );
+    }
+
+    public function deleteAction()
+    {
+        /*
+         * TODO
+        $id = (int)$this->params()->fromRoute('id', 0);
+        if (!$id)
+        {
+            return $this->redirect()->toRoute('medicaments');
+        }
+
+        $request = $this->getRequest();
+        if($request->isPost())
+        {
+            $del = $request->getPost('del', 'No');
+
+            if ($del == 'Yes') {
+                $id = (int) $request->getPost('id');
+                $this->getAlbumTable()->deleteAlbum($id);
+            }
+
+            // Redirect to list of albums
+            return $this->redirect()->toRoute('album');
+        }
+
+        return array(
+            'id'    => $id,
+            'album' => $this->getAlbumTable()->getAlbum($id)
+        );
+        */
     }
 
     public function getMedicamentsTable()

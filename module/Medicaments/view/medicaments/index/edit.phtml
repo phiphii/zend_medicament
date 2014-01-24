@@ -1,0 +1,16 @@
+<?php
+$title = 'Edit Drug';
+$this->headTitle($title);
+echo '<h1>' . $this->escapeHtml($title) . '</h1>';
+
+$form = $this->form;
+$form->setAttribute('action', $this->url('medicaments', array('action' => 'edit', 'id' => $this->id,)));
+
+$form->prepare();
+echo $this->form()->openTag($form);
+
+echo $this->formHidden($form->get('id'));
+echo $this->formRow($form->get('name'));
+echo $this->formSubmit($form->get('submit'));
+
+echo $this->form()->closeTag();

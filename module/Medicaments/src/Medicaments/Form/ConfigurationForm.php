@@ -28,16 +28,16 @@ class ConfigurationForm extends Form
              )
         ));
         $this->add(array(
-                 'type' => 'Zend\Form\Element\Select',
-                 'name' => 'environment',
-                 'options' => array(
-                              'value_options' => array(
-                                                     'dev' => 'dev',
-                                                     'recette' => 'recette',
-                                                     'production' => 'production',
-                                                 ),
-                 )
-         ));
+                'type' => 'Zend\Form\Element\Select',
+                'name' => 'environment',
+                'options' => array(
+                                'value_options' => array(
+                                    'dev' => 'dev',
+                                    'recette' => 'recette',
+                                    'production' => 'production',
+                                ),
+                )
+        ));
         $this->add(array(
             'name' => 'submit',
             'attributes' => array(

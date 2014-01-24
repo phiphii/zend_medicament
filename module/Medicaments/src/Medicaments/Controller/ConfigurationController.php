@@ -14,21 +14,24 @@ class ConfigurationController extends AbstractActionController
 
     public function indexAction()
     {
-        return new ViewModel();
+        $form = new ConfigurationForm();
+        $form->get('submit')->setValue('Ok');
+        return new ViewModel(
+                        array(
+                            'form' => $form,
+                        ));
     }
 
     public function changeConfigurationAction()
     {
     	$form = new ConfigurationForm();
-        $form->get('submit')->setValue('Ok');
-
         $request = $this->getRequest();
         if ($request->isPost())
         {
             $form->setData($request->getPost());
             if ($form->isValid())
             {
-            	// Setting the file selected into session
+                // Setting the file selected into session
                 $session              = new Container('configuration');
                 $session->config_file = $request->getPost()->config_file;
                 $session->environment = $request->getPost()->environment;
