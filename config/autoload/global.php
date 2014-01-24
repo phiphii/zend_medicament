@@ -59,6 +59,7 @@ else
 {
 	$environment = 'production';
 }
+
 $webhost  = $data[$environment]['webhost'];
 $database = $data[$environment]['database'];
 $adapter  = $database['adapter'];
