@@ -46,6 +46,20 @@ return array(
                     ),
                 ),
             ),
+            'contact' => array(
+                'type'    => 'segment',
+                'options' => array(
+                    'route'    => '/medicaments/contact[/:action][/:id]',
+                    'constraints' => array(
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id'     => '[0-9]+',
+                    ),
+                    'defaults' => array(
+                        'controller' => 'Medicaments\Controller\Contact',
+                        'action'     => 'index',
+                    ),
+                ),
+            ),
         ),
     ),
     'service_manager' => array(
@@ -71,6 +85,7 @@ return array(
          'invokables' => array(
              'Medicaments\Controller\Index' => 'Medicaments\Controller\IndexController',
              'Medicaments\Controller\Configuration' => 'Medicaments\Controller\ConfigurationController',
+             'Medicaments\Controller\Contact' => 'Medicaments\Controller\ContactController',
          ),
      ),
      'view_manager' => array(
@@ -97,4 +112,5 @@ return array(
             ),
         ),
     ),
- );
+);
+?>

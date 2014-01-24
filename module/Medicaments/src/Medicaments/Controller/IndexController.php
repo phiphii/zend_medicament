@@ -15,6 +15,8 @@ class IndexController extends AbstractActionController
 
     public function indexAction()
     {
+        $dispatcher = $this->getDispatcher();
+        $this->layout()->dispatcher = $dispatcher;
         // Initialize Zend\Session container in order to send it to our view
         $session = new Container('configuration');
         return new ViewModel(
@@ -27,6 +29,8 @@ class IndexController extends AbstractActionController
 
     public function addAction()
     {
+        $dispatcher = $this->getDispatcher();
+        $this->layout()->dispatcher = $dispatcher;
         $form    = new MedicamentForm();
         $form->get('submit')->setValue('Add');
         
@@ -49,6 +53,8 @@ class IndexController extends AbstractActionController
 
     public function editAction()
     {
+        $dispatcher = $this->getDispatcher();
+        $this->layout()->dispatcher = $dispatcher;
         $id = (int)$this->params()->fromRoute('id', 0);
         if(!$id)
         {
@@ -82,6 +88,8 @@ class IndexController extends AbstractActionController
 
     public function deleteAction()
     {
+        $dispatcher = $this->getDispatcher();
+        $this->layout()->dispatcher = $dispatcher;
         $id = (int)$this->params()->fromRoute('id', 0);
         if (!$id)
         {
@@ -115,6 +123,16 @@ class IndexController extends AbstractActionController
             $this->medicamentsTable = $serviceManager->get('Medicaments\Model\MedicamentsTable');
         }
         return $this->medicamentsTable;
+    }
+
+    public function getDispatcher()
+    {
+        $request                  = $this->params()->fromRoute();
+        $dispatcher               = array();
+        $dispatcher['controller'] = $request['controller'];
+        $dispatcher['action']     = $request['action'];
+        $dispatcher['view']       = $request['action'];
+        return $dispatcher;
     }
 }
 

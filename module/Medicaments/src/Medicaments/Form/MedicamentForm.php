@@ -3,6 +3,7 @@ namespace Medicaments\Form;
 
 use Zend\Form\Element;
 use Zend\Form\Form;
+use Zend\I18n\Translator\Translator;
 
 class MedicamentForm extends Form
 {

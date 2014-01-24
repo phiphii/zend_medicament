@@ -1,10 +1,10 @@
 <?php
-$title = 'Delete drug (id ' . $id . ')';
+$title = $this->translate('Delete drug');
 $this->headTitle($title);
 ?>
 <h1><?php echo $this->escapeHtml($title); ?></h1>
 
-<p>Are you sure that you want to delete
+<p><?php echo $this->translate('Are you sure that you want to delete'); ?>
     '<?php echo $this->escapeHtml($medicament->name); ?>'?
 </p>
 <?php
@@ -16,7 +16,7 @@ $url = $this->url('medicaments', array(
 <form action="<?php echo $url; ?>" method="post">
 	<div>
 	    <input type="hidden" name="id" value="<?php echo (int)$medicament->id; ?>" />
-	    <input type="submit" name="del" value="Yes" />
-	    <input type="submit" name="del" value="No" />
+	    <input type="submit" name="del" value="<?php echo $this->translate('Yes'); ?>" />
+	    <input type="submit" name="del" value="<?php echo $this->translate('No'); ?>" />
 	</div>
 </form>
