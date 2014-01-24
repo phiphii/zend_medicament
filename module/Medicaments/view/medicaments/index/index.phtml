@@ -29,3 +29,5 @@ foreach ($medicaments as $medicament)
 	</tr>
 <?php } ?>
 </table>
+
+<a href="<?php echo $this->url('medicaments', array('action' => 'add')); ?>"><?php echo $this->translate('Add new drug'); ?></a>

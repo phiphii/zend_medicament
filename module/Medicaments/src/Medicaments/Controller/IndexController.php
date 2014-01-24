@@ -5,6 +5,7 @@ namespace Medicaments\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Zend\Session\Container;
+use Medicaments\Model\Medicaments;
 use Medicaments\Form\MedicamentForm;
 
 class IndexController extends AbstractActionController
@@ -24,6 +25,28 @@ class IndexController extends AbstractActionController
 		        	);
     }
 
+    public function addAction()
+    {
+        $form    = new MedicamentForm();
+        $form->get('submit')->setValue('Add');
+        
+        $request = $this->getRequest();
+        if ($request->isPost()) {
+            $medicament = new Medicaments();
+            $form->setInputFilter($medicament->getInputFilter());
+            $form->setData($request->getPost());
+
+            if ($form->isValid()) {
+                $medicament->exchangeArray($form->getData());
+                $this->getMedicamentsTable()->saveMedicament($medicament);
+
+                // Redirect to list of drugs
+                return $this->redirect()->toRoute('medicaments');
+            }
+        }
+        return array('form' => $form);
+    }
+
     public function editAction()
     {
         $id = (int)$this->params()->fromRoute('id', 0);
@@ -40,12 +63,13 @@ class IndexController extends AbstractActionController
 
         $request = $this->getRequest();
         if ($request->isPost()) {
+            $form->setInputFilter($medicament->getInputFilter());
             $form->setData($request->getPost());
 
             if ($form->isValid()) {
                 $this->getMedicamentsTable()->saveMedicament($form->getData());
 
-                // Redirect to list of albums
+                // Redirect to list of drugs
                 return $this->redirect()->toRoute('medicaments');
             }
         }
@@ -58,8 +82,6 @@ class IndexController extends AbstractActionController
 
     public function deleteAction()
     {
-        /*
-         * TODO
         $id = (int)$this->params()->fromRoute('id', 0);
         if (!$id)
         {
@@ -73,18 +95,17 @@ class IndexController extends AbstractActionController
 
             if ($del == 'Yes') {
                 $id = (int) $request->getPost('id');
-                $this->getAlbumTable()->deleteAlbum($id);
+                $this->getMedicamentsTable()->deleteMedicament($id);
             }
 
-            // Redirect to list of albums
-            return $this->redirect()->toRoute('album');
+            // Redirect to list of drugs
+            return $this->redirect()->toRoute('medicaments');
         }
 
         return array(
             'id'    => $id,
-            'album' => $this->getAlbumTable()->getAlbum($id)
+            'medicament' => $this->getMedicamentsTable()->getMedicament($id)
         );
-        */
     }
 
     public function getMedicamentsTable()
