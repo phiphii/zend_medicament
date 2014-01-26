@@ -1,4 +1,12 @@
 <?php
+if(isset($_COOKIE['lang']))
+{
+    $lang = $_COOKIE['lang'];
+}
+else
+{
+    $lang = 'fr_FR';
+}
 return array(
     'router' => array(
         'routes' => array(
@@ -60,6 +68,20 @@ return array(
                     ),
                 ),
             ),
+            'language' => array(
+                'type'    => 'segment',
+                'options' => array(
+                    'route'    => '/medicaments/language[/:action][/:id]',
+                    'constraints' => array(
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id'     => '[0-9]+',
+                    ),
+                    'defaults' => array(
+                        'controller' => 'Medicaments\Controller\Language',
+                        'action'     => 'index',
+                    ),
+                ),
+            ),
         ),
     ),
     'service_manager' => array(
@@ -72,7 +94,7 @@ return array(
         ),
     ),
     'translator' => array(
-        'locale' => 'fr_FR',
+        'locale' => $lang,
         'translation_file_patterns' => array(
             array(
                 'type'     => 'gettext',
@@ -86,6 +108,7 @@ return array(
              'Medicaments\Controller\Index' => 'Medicaments\Controller\IndexController',
              'Medicaments\Controller\Configuration' => 'Medicaments\Controller\ConfigurationController',
              'Medicaments\Controller\Contact' => 'Medicaments\Controller\ContactController',
+             'Medicaments\Controller\Language' => 'Medicaments\Controller\LanguageController',
          ),
      ),
      'view_manager' => array(

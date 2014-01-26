@@ -23,12 +23,12 @@ foreach ($medicaments as $medicament)
 	    <td><?php echo $this->escapeHtml($medicament->name);?></td>
 	    <td>
 	        <a href="<?php echo $this->url('medicaments', array('action'=>'edit', 'id' => $medicament->id)); ?>">
-	        	Edit
+	        	<?php echo $this->translate('Edit'); ?>
 	        </a>
 	    </td>
 	    <td>
 	        <a href="<?php echo $this->url('medicaments', array('action'=>'delete', 'id' => $medicament->id));?>">
-	        	Delete
+	        	<?php echo $this->translate('Delete'); ?>
 	        </a>
 	    </td>
 	</tr>

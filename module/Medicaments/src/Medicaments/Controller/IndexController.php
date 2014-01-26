@@ -82,8 +82,6 @@ class IndexController extends AbstractActionController
 
     public function deleteAction()
     {
-        $dispatcher = $this->getDispatcher();
-        $this->layout()->dispatcher = $dispatcher;
         $id = (int)$this->params()->fromRoute('id', 0);
         if (!$id)
         {

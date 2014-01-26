@@ -1,5 +1,5 @@
 <?php
-$title = 'Configuration file';
+$title = $this->translate('Configuration file');
 $this->headTitle($title);
 echo '<h1>' . $this->escapeHtml($title) . '</h1>';
 ?>
@@ -10,8 +10,8 @@ echo '<h1>' . $this->escapeHtml($title) . '</h1>';
 ?>
 <table class="table table-bordered table-striped">
 <tr>
-    <th>File type</th>
-    <th>Environment</th>
+    <th><?php echo $this->translate('File type'); ?></th>
+    <th><?php echo $this->translate('Environment'); ?></th>
     <th>&nbsp;</th>
 </tr>
 <?php

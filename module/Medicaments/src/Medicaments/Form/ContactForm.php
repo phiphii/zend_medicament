@@ -43,7 +43,8 @@ class ContactForm extends Form
         $this->add(array(
             'name' => 'phone',
             'attributes' => array(
-                'type'  => 'text',
+                'type'  => 'tel',
+                'pattern'  => '^0[1-68]([-. ]?[0-9]{2}){4}$'
             ),
             'options' => array(
                 'label' => 'Phone',

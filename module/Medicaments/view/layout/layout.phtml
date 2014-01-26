@@ -42,6 +42,30 @@
                         <li><a href="<?php echo $this->url('configuration') ?>"><?php echo $this->translate('Configuration') ?></a></li>
                         <li><a href="<?php echo $this->url('contact') ?>"><?php echo $this->translate('Contact') ?></a></li>
                     </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <?php echo $this->translate('Language'); ?>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="<?php echo $this->url('language', array('action' => 'index', 'id' => '1')); ?>">
+                                        <?php echo $this->translate('French'); ?>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->url('language', array('action' => 'index', 'id' => '2')); ?>">
+                                        <?php echo $this->translate('English'); ?>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo $this->url('language', array('action' => 'index', 'id' => '3')); ?>">
+                                        <?php echo $this->translate('Spanish'); ?>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div><!--/.nav-collapse -->
             </div>
         </nav>
@@ -49,16 +73,23 @@
             <?php echo $this->content; ?>
             <hr>
             <footer>
-                <p>&copy; 2013 - <?php echo date('Y') ?> <?php echo $this->translate('by'); ?> Axel Bouaziz, Philipp Traing, Jose Albea and Yohann Teisseire. <?php echo $this->translate('All rights reserved.') ?></p>
+                <p>&copy; 2013 - <?php echo date('Y') ?> <?php echo $this->translate('by'); ?> Axel Bouaziz, Philipp Traing, Jose Albea <?php echo $this->translate('and'); ?> Yohann Teisseire. <?php echo $this->translate('All rights reserved.') ?></p>
                 <p>
                     <?php
                     
                     ?>
                 </p>
                 <?php
-                Zend\Debug\Debug::dump($controllerName, 'controller');
-                Zend\Debug\Debug::dump($actionName, 'action');
-                Zend\Debug\Debug::dump($actionName, 'view');
+                // Debugging controller, action and view into the footer
+                Zend\Debug\Debug::dump($controllerName, $this->translate('controller'));
+                Zend\Debug\Debug::dump($actionName, $this->translate('action'));
+                Zend\Debug\Debug::dump($actionName, $this->translate('view'));
+
+                // Logging these vars into a file
+                $logger = new Zend\Log\Logger;
+                $writer = new Zend\Log\Writer\Stream('./var/log/debug.log');
+                $logger->addWriter($writer);                
+                $logger->debug('Controller: ' . $controllerName . ' - Action: ' . $actionName . ' - View: ' . $actionName);
                 ?>
             </footer>
         </div> <!-- /container -->

@@ -8,10 +8,7 @@ use Medicaments\Form\ContactForm;
 use Medicaments\Model\Contact;
 use Zend\Mail\Message;
 use Zend\Mail\Transport\Sendmail as SendmailTransport;
-
-use Zend\Form\Element;
-use Zend\Form\Form;
-use Zend\Captcha;
+use Zend\I18n\Translator\Translator;
 
 class ContactController extends AbstractActionController
 {
@@ -20,7 +17,10 @@ class ContactController extends AbstractActionController
     	$form    = new ContactForm();
         $form->get('submit')->setValue('Send'); 
         
-    	return new ViewModel(array('form' => $form));	
+        $translator = new Translator();
+        $translator->addTranslationFile('gettext', $_COOKIE['lang'].'.po', $_COOKIE['lang']);
+        
+    	return new ViewModel(array('form' => $form, 'translator' => $translator));	
     }
 
     public function sendAction()
