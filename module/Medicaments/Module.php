@@ -59,4 +59,25 @@ class Module
             ),
         );
     }
+
+    public function onBootstrap($e)
+    {
+        $e->getApplication()->getEventManager()->getSharedManager()
+          ->attach('Zend\Mvc\Controller\AbstractActionController', 'dispatch', function($e){
+            // Getting the controller object
+            $controller = $e->getTarget();
+            // Getting the class of the controller, which matches the path to our controller
+            $controllerClass = get_class($controller);
+            // Getting the module namespace, can be usefull
+            $moduleNamespace = substr($controllerClass, 0, strpos($controllerClass, '\\'));
+
+            $routeMatch = $e->getRouteMatch();
+            // Get the action name
+            $actionName = strtolower($routeMatch->getParam('action', 'not-found'));
+
+            $controller->layout()->moduleNamespace = $moduleNamespace;
+            $controller->layout()->controllerName = $controllerClass;
+            $controller->layout()->actionName = $actionName;
+          }, 100);
+    }
 }

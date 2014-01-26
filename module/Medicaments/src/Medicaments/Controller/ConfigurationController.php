@@ -51,8 +51,6 @@ class ConfigurationController extends AbstractActionController
 
     public function indexAction()
     {
-        $dispatcher = $this->getDispatcher();
-        $this->layout()->dispatcher = $dispatcher;
         return new ViewModel(
                         array(
                             'configurations' => $this->getConfigurationTable()->fetchAll()
@@ -61,8 +59,6 @@ class ConfigurationController extends AbstractActionController
 
     public function changeConfigurationAction()
     {
-        $dispatcher = $this->getDispatcher();
-        $this->layout()->dispatcher = $dispatcher;
         $request = $this->getRequest();
         if($request->isPost())
         {
@@ -92,16 +88,6 @@ class ConfigurationController extends AbstractActionController
             $this->configurationTable = $serviceManager->get('Medicaments\Model\ConfigurationTable');
         }
         return $this->configurationTable;
-    }
-
-    public function getDispatcher()
-    {
-        $request                  = $this->params()->fromRoute();
-        $dispatcher               = array();
-        $dispatcher['controller'] = $request['controller'];
-        $dispatcher['action']     = $request['action'];
-        $dispatcher['view']       = $request['action'];
-        return $dispatcher;
     }
 }
 

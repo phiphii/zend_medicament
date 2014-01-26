@@ -15,8 +15,6 @@ class IndexController extends AbstractActionController
 
     public function indexAction()
     {
-        $dispatcher = $this->getDispatcher();
-        $this->layout()->dispatcher = $dispatcher;
         // Initialize Zend\Session container in order to send it to our view
         $session = new Container('configuration');
         return new ViewModel(
@@ -29,8 +27,6 @@ class IndexController extends AbstractActionController
 
     public function addAction()
     {
-        $dispatcher = $this->getDispatcher();
-        $this->layout()->dispatcher = $dispatcher;
         $form    = new MedicamentForm();
         $form->get('submit')->setValue('Add');
         
@@ -53,8 +49,6 @@ class IndexController extends AbstractActionController
 
     public function editAction()
     {
-        $dispatcher = $this->getDispatcher();
-        $this->layout()->dispatcher = $dispatcher;
         $id = (int)$this->params()->fromRoute('id', 0);
         if(!$id)
         {
@@ -125,6 +119,11 @@ class IndexController extends AbstractActionController
         return $this->medicamentsTable;
     }
 
+    /*
+     * OLD METHOD: used to get the controller and action's name in order to use them in the layout.
+     * Useless since using the onBootstrap method (in Module.php)
+     */
+    /*
     public function getDispatcher()
     {
         $request                  = $this->params()->fromRoute();
@@ -134,5 +133,6 @@ class IndexController extends AbstractActionController
         $dispatcher['view']       = $request['action'];
         return $dispatcher;
     }
+    */
 }
 

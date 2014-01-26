@@ -15,11 +15,8 @@ use Zend\Captcha;
 
 class ContactController extends AbstractActionController
 {
-
     public function indexAction()
     {
-        $dispatcher = $this->getDispatcher();
-        $this->layout()->dispatcher = $dispatcher;
     	$form    = new ContactForm();
         $form->get('submit')->setValue('Send'); 
         
@@ -28,8 +25,6 @@ class ContactController extends AbstractActionController
 
     public function sendAction()
     {
-        $dispatcher = $this->getDispatcher();
-        $this->layout()->dispatcher = $dispatcher;
     	$form    = new ContactForm();
         $form->get('submit')->setValue('Send');
         
@@ -72,16 +67,5 @@ class ContactController extends AbstractActionController
         }
         return array('form' => $form);
     }
-
-    public function getDispatcher()
-    {
-        $request                  = $this->params()->fromRoute();
-        $dispatcher               = array();
-        $dispatcher['controller'] = $request['controller'];
-        $dispatcher['action']     = $request['action'];
-        $dispatcher['view']       = $request['action'];
-        return $dispatcher;
-    }
-
 }
 
