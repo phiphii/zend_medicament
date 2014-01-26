@@ -82,6 +82,20 @@ return array(
                     ),
                 ),
             ),
+            'rss' => array(
+                'type'    => 'segment',
+                'options' => array(
+                    'route'    => '/medicaments/rss[/:action][/:id]',
+                    'constraints' => array(
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id'     => '[0-9]+',
+                    ),
+                    'defaults' => array(
+                        'controller' => 'Medicaments\Controller\Rss',
+                        'action'     => 'index',
+                    ),
+                ),
+            ),
         ),
     ),
     'service_manager' => array(
@@ -109,6 +123,7 @@ return array(
              'Medicaments\Controller\Configuration' => 'Medicaments\Controller\ConfigurationController',
              'Medicaments\Controller\Contact' => 'Medicaments\Controller\ContactController',
              'Medicaments\Controller\Language' => 'Medicaments\Controller\LanguageController',
+             'Medicaments\Controller\Rss' => 'Medicaments\Controller\RssController',
          ),
      ),
      'view_manager' => array(
