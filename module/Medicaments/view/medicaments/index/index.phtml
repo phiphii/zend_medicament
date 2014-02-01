@@ -10,17 +10,24 @@ echo '<h1>' . $this->escapeHtml($title) . '</h1>';
 <table class="table table-bordered table-striped">
 <tr>
     <th>ID</th>
-    <th>Name</th>
+    <th><?php echo $this->translate('Name'); ?></th>
+    <th><?php echo $this->translate('Molecule'); ?></th>
+    <th><?php echo $this->translate('Indications'); ?></th>
+    <th><?php echo $this->translate('Cons-indications'); ?></th>
     <th>&nbsp;</th>
     <th>&nbsp;</th>
 </tr>
 <?php
 foreach ($medicaments as $medicament)
 {
+	//echo $this->translate($medicament->molecule);
 ?>
 	<tr>
-	    <td><?php echo $this->escapeHtml($medicament->id);?></td>
-	    <td><?php echo $this->escapeHtml($medicament->name);?></td>
+	    <td><?php echo $this->escapeHtml($medicament->id); ?></td>
+	    <td><?php echo $this->escapeHtml($medicament->name); ?></td>
+	    <td><?php echo $this->escapeHtml($medicament->molecule); ?></td>
+	    <td><?php echo nl2br($this->escapeHtml($medicament->indications)); ?></td>
+	    <td><?php echo nl2br($this->escapeHtml($medicament->cons_indications)); ?></td>
 	    <td>
 	        <a href="<?php echo $this->url('medicaments', array('action'=>'edit', 'id' => $medicament->id)); ?>">
 	        	<?php echo $this->translate('Edit'); ?>

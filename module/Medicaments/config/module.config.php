@@ -43,7 +43,7 @@ return array(
             'configuration' => array(
                 'type'    => 'segment',
                 'options' => array(
-                    'route'    => '/medicaments/configuration[/:action][/:id]',
+                    'route'    => '/medicaments/configuration[/:action][/:id][/]',
                     'constraints' => array(
                         'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
                         'id'     => '[0-9]+',
@@ -57,7 +57,7 @@ return array(
             'contact' => array(
                 'type'    => 'segment',
                 'options' => array(
-                    'route'    => '/medicaments/contact[/:action][/:id]',
+                    'route'    => '/medicaments/contact[/:action][/:id][/]',
                     'constraints' => array(
                         'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
                         'id'     => '[0-9]+',
@@ -71,7 +71,7 @@ return array(
             'language' => array(
                 'type'    => 'segment',
                 'options' => array(
-                    'route'    => '/medicaments/language[/:action][/:id]',
+                    'route'    => '/medicaments/language[/:action][/:id][/]',
                     'constraints' => array(
                         'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
                         'id'     => '[0-9]+',
@@ -85,7 +85,7 @@ return array(
             'rss' => array(
                 'type'    => 'segment',
                 'options' => array(
-                    'route'    => '/medicaments/rss[/:action][/:id]',
+                    'route'    => '/medicaments/rss[/:action][/:id][/]',
                     'constraints' => array(
                         'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
                         'id'     => '[0-9]+',

@@ -7,6 +7,7 @@ use Zend\View\Model\ViewModel;
 use Zend\Session\Container;
 use Medicaments\Model\Medicaments;
 use Medicaments\Form\MedicamentForm;
+use Zend\I18n\Translator\Translator;
 
 class IndexController extends AbstractActionController
 {
@@ -27,15 +28,17 @@ class IndexController extends AbstractActionController
 
     public function addAction()
     {
+        $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'fr_FR';
+        $translator = new Translator();
+
         $form    = new MedicamentForm();
-        $form->get('submit')->setValue('Add');
+        $form->get('submit')->setValue($translator->translate('Add', 'default', $lang));
         
         $request = $this->getRequest();
         if ($request->isPost()) {
             $medicament = new Medicaments();
             $form->setInputFilter($medicament->getInputFilter());
             $form->setData($request->getPost());
-
             if ($form->isValid()) {
                 $medicament->exchangeArray($form->getData());
                 $this->getMedicamentsTable()->saveMedicament($medicament);
@@ -44,7 +47,7 @@ class IndexController extends AbstractActionController
                 return $this->redirect()->toRoute('medicaments');
             }
         }
-        return array('form' => $form);
+        return array('form' => $form, 'messages' => $form->getMessages());
     }
 
     public function editAction()
@@ -65,7 +68,6 @@ class IndexController extends AbstractActionController
         if ($request->isPost()) {
             $form->setInputFilter($medicament->getInputFilter());
             $form->setData($request->getPost());
-
             if ($form->isValid()) {
                 $this->getMedicamentsTable()->saveMedicament($form->getData());
 
@@ -92,8 +94,8 @@ class IndexController extends AbstractActionController
         if($request->isPost())
         {
             $del = $request->getPost('del', 'No');
-
-            if ($del == 'Yes') {
+            if($del == 'Yes' || $del == 'Oui' || $del == 'Sí')
+            {
                 $id = (int) $request->getPost('id');
                 $this->getMedicamentsTable()->deleteMedicament($id);
             }

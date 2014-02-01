@@ -12,7 +12,11 @@ echo $this->form()->openTag($form);
 
 echo $this->formHidden($form->get('id'));
 echo $this->formRow($form->get('name'));
+echo $this->formRow($form->get('molecule'));
+echo $this->formRow($form->get('indications'));
+echo $this->formRow($form->get('cons_indications'));
 echo $this->formSubmit($form->get('submit'));
 
 echo $this->form()->closeTag();
 ?>
+<?php if($messages) print_r($messages); ?>

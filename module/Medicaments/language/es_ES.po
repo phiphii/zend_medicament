@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendSkeletonApplication\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-26 21:14+0100\n"
-"PO-Revision-Date: 2014-01-26 21:17+0100\n"
+"POT-Creation-Date: 2014-02-01 21:01+0100\n"
+"PO-Revision-Date: 2014-02-01 21:07+0100\n"
 "Last-Translator: \n"
 "Language-Team: ZF Contributors <zf-devteam@zend.com>\n"
 "Language: es_ES\n"
@@ -14,6 +14,57 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Generator: Poedit 1.6.3\n"
 "X-Poedit-SearchPath-0: ..\n"
+
+#: ../src/Medicaments/Controller/ContactController.php:29
+msgid "Send"
+msgstr "enviar"
+
+#: ../src/Medicaments/Controller/IndexController.php:35
+msgid "Add"
+msgstr "añadir"
+
+#: ../src/Medicaments/Form/ContactForm.php:26
+#: ../src/Medicaments/Form/MedicamentForm.php:31
+#: ../view/medicaments/index/index.phtml:13
+msgid "Name"
+msgstr "Nombre"
+
+#: ../src/Medicaments/Form/ContactForm.php:35
+msgid "Last name"
+msgstr "Nombre de pila"
+
+#: ../src/Medicaments/Form/ContactForm.php:44
+msgid "E-mail"
+msgstr "E-mail"
+
+#: ../src/Medicaments/Form/ContactForm.php:54
+msgid "Phone"
+msgstr "Teléfono"
+
+#: ../src/Medicaments/Form/ContactForm.php:63 ../view/error/404.phtml:60
+#: ../view/error/404.phtml:84 ../view/error/index.phtml:15
+#: ../view/error/index.phtml:39
+msgid "Message"
+msgstr "Mensaje"
+
+#: ../src/Medicaments/Form/ContactForm.php:68
+msgid "captcha"
+msgstr "captcha"
+
+#: ../src/Medicaments/Form/MedicamentForm.php:40
+#: ../view/medicaments/index/index.phtml:14
+msgid "Molecule"
+msgstr "Molécula"
+
+#: ../src/Medicaments/Form/MedicamentForm.php:49
+#: ../view/medicaments/index/index.phtml:15
+msgid "Indications"
+msgstr "Indicaciones"
+
+#: ../src/Medicaments/Form/MedicamentForm.php:58
+#: ../view/medicaments/index/index.phtml:16
+msgid "Cons-indications"
+msgstr "Contra-indicaciones"
 
 #: ../view/error/404.phtml:1
 msgid "A 404 error occurred"
@@ -59,11 +110,6 @@ msgstr "Información adicional"
 #: ../view/error/index.phtml:11 ../view/error/index.phtml:35
 msgid "File"
 msgstr "Archivo"
-
-#: ../view/error/404.phtml:60 ../view/error/404.phtml:84
-#: ../view/error/index.phtml:15 ../view/error/index.phtml:39
-msgid "Message"
-msgstr "Mensaje"
 
 #: ../view/error/404.phtml:64 ../view/error/404.phtml:88
 #: ../view/error/index.phtml:19 ../view/error/index.phtml:43
@@ -159,7 +205,7 @@ msgid "Contact us"
 msgstr "Contáctenos"
 
 #: ../view/medicaments/index/add.phtml:2
-#: ../view/medicaments/index/index.phtml:41
+#: ../view/medicaments/index/index.phtml:48
 msgid "Add new drug"
 msgstr "Añadir nuevo medicamento"
 
@@ -183,13 +229,22 @@ msgstr "No"
 msgid "Drugs list"
 msgstr "Lista de Drogas "
 
-#: ../view/medicaments/index/index.phtml:26
+#: ../view/medicaments/index/index.phtml:33
 msgid "Edit"
 msgstr "Editar"
 
-#: ../view/medicaments/index/index.phtml:31
+#: ../view/medicaments/index/index.phtml:38
 msgid "Delete"
 msgstr "Borrar"
+
+#~ msgid "name"
+#~ msgstr "nombre"
+
+#~ msgid "lastName"
+#~ msgstr "apellido"
+
+#~ msgid "message"
+#~ msgstr "mensaje"
 
 #~ msgid "Welcome to %sZend Framework 2%s"
 #~ msgstr "Bienvenido al %sZend Framework 2%s"

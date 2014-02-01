@@ -15,18 +15,18 @@ class ContactController extends AbstractActionController
     public function indexAction()
     {
     	$form    = new ContactForm();
-        $form->get('submit')->setValue('Send'); 
+        $form->get('submit')->setValue('Send');
         
-        $translator = new Translator();
-        $translator->addTranslationFile('gettext', $_COOKIE['lang'].'.po', $_COOKIE['lang']);
-        
-    	return new ViewModel(array('form' => $form, 'translator' => $translator));	
+    	return new ViewModel(array('form' => $form));	
     }
 
     public function sendAction()
     {
+        $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'fr_FR';
+        $translator = new Translator();
+
     	$form    = new ContactForm();
-        $form->get('submit')->setValue('Send');
+        $form->get('submit')->setValue($translator->translate('Send', 'default', $lang));
         
         $request = $this->getRequest();
         if ($request->isPost()) {

@@ -9,6 +9,8 @@ class MedicamentForm extends Form
 {
     public function __construct($name = null)
     {
+        $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'fr_FR';
+        $translator = new Translator();
         // Création du formulaire portant le name "edit-medicament-form"
         parent::__construct('edit-medicament-form');
         // Définition du type de formulaire
@@ -26,7 +28,34 @@ class MedicamentForm extends Form
                 'type'  => 'text',
             ),
             'options' => array(
-                'label' => 'Name',
+                'label' => $translator->translate('Name', 'default', $lang),
+            ),
+        ));
+        $this->add(array(
+            'name' => 'molecule',
+            'attributes' => array(
+                'type'  => 'text',
+            ),
+            'options' => array(
+                'label' => $translator->translate('Molecule', 'default', $lang),
+            ),
+        ));
+        $this->add(array(
+            'name' => 'indications',
+            'attributes' => array(
+                'type'  => 'textarea',
+            ),
+            'options' => array(
+                'label' => $translator->translate('Indications', 'default', $lang),
+            ),
+        ));
+        $this->add(array(
+            'name' => 'cons_indications',
+            'attributes' => array(
+                'type'  => 'textarea',
+            ),
+            'options' => array(
+                'label' => $translator->translate('Cons-indications', 'default', $lang),
             ),
         ));
         $this->add(array(

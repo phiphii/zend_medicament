@@ -4,6 +4,7 @@ namespace Medicaments\Form;
 use Zend\Form\Element;
 use Zend\Form\Form;
 use Zend\Captcha;
+use Zend\I18n\Translator\Translator;
 
 class ContactForm extends Form
 {
@@ -13,13 +14,16 @@ class ContactForm extends Form
         parent::__construct('contact-form');
         $this->setAttribute('method', 'post');
 
+        $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'fr_FR';
+        $translator = new Translator();
+
         $this->add(array(
             'name' => 'firstname',
             'attributes' => array(
                 'type'  => 'text',
             ),
             'options' => array(
-                'label' => 'Name',
+                'label' => $translator->translate('Name', 'default', $lang),
             ),
         ));
         $this->add(array(
@@ -28,7 +32,7 @@ class ContactForm extends Form
                 'type'  => 'text',
             ),
             'options' => array(
-                'label' => 'Last name',
+                'label' => $translator->translate('Last name', 'default', $lang),
             ),
         ));
         $this->add(array(
@@ -37,7 +41,7 @@ class ContactForm extends Form
                 'type'  => 'text',
             ),
             'options' => array(
-                'label' => 'E-mail',
+                'label' => $translator->translate('E-mail', 'default', $lang),
             ),
         ));
         $this->add(array(
@@ -47,7 +51,7 @@ class ContactForm extends Form
                 'pattern'  => '^0[1-68]([-. ]?[0-9]{2}){4}$'
             ),
             'options' => array(
-                'label' => 'Phone',
+                'label' => $translator->translate('Phone', 'default', $lang),
             ),
         ));
         $this->add(array(
@@ -56,12 +60,12 @@ class ContactForm extends Form
                 'type'  => 'textarea',
             ),
             'options' => array(
-                'label' => 'Message',
+                'label' => $translator->translate('Message', 'default', $lang),
             ),
         ));
         $this->add(array(
             'type' => 'Zend\Form\Element\Captcha',
-            'name' => 'captcha',
+            'name' => $translator->translate('captcha', 'default', $lang),
             'options' => array(
                 'label' => 'Please verify you are human',
                 'captcha' => new Captcha\Dumb(),

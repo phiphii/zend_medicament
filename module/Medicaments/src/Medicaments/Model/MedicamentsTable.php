@@ -33,7 +33,10 @@ class MedicamentsTable
     public function saveMedicament(Medicaments $medicament)
     {
         $data = array(
-                    'name' => $medicament->name,
+                    'name'             => $medicament->name,
+                    'molecule'         => $medicament->molecule,
+                    'indications'      => $medicament->indications,
+                    'cons_indications' => $medicament->cons_indications,
                 );
 
         $id = (int)$medicament->id;

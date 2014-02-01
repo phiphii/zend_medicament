@@ -21,22 +21,16 @@ class RssController extends AbstractActionController
 		$feed->setLink('http://localhost/Projet_Zend/public/medicaments');
 		$feed->setDescription('RSS Feed for drugs');
 		$feed->setFeedLink('http://localhost/Projet_Zend/public/medicaments/rss', 'rss');
-		$feed->addAuthor(array(
-		    'name'  => 'Axel',
-		    'email' => 'axel.bouaziz@hotmail.fr',
-		    'uri'   => 'http://localhost/Projet_Zend',
-		));
 		$feed->setDateModified(time());
 
 		/**
 		 * Add one or more entries. Note that entries must
 		 * be manually added once created.
 		 */
-
-		foreach ($this->getMedicamentsTable() as $medicament)
+		foreach ($this->getMedicamentsTable()->fetchAll() as $medicament)
 		{
 			$entry = $feed->createEntry();
-			$entry->setTitle($this->escapeHtml($medicament->name));
+			$entry->setTitle($medicament->name);
 			$entry->addAuthor(array(
 			    'name'  => 'Axel',
 			    'email' => 'axel.bouaziz@hotmail.fr',
@@ -46,7 +40,7 @@ class RssController extends AbstractActionController
 			$entry->setDateCreated(time());
 			$entry->setDescription('Medicament ID ' . $medicament->id);
 			$entry->setContent(
-			    'Medicament ID ' . $medicament->id . ' - Name: ' . $this->escapeHtml($medicament->name)
+			    'Medicament ID ' . $medicament->id . ' - Name: ' . $medicament->name
 			);
 			$feed->addEntry($entry);
 		}
