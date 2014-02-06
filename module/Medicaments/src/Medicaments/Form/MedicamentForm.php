@@ -26,6 +26,7 @@ class MedicamentForm extends Form
             'name' => 'name',
             'attributes' => array(
                 'type'  => 'text',
+                'class' => 'form-control',
             ),
             'options' => array(
                 'label' => $translator->translate('Name', 'default', $lang),
@@ -35,6 +36,7 @@ class MedicamentForm extends Form
             'name' => 'molecule',
             'attributes' => array(
                 'type'  => 'text',
+                'class' => 'form-control',
             ),
             'options' => array(
                 'label' => $translator->translate('Molecule', 'default', $lang),
@@ -44,6 +46,7 @@ class MedicamentForm extends Form
             'name' => 'indications',
             'attributes' => array(
                 'type'  => 'textarea',
+                'class' => 'form-control',
             ),
             'options' => array(
                 'label' => $translator->translate('Indications', 'default', $lang),
@@ -53,6 +56,7 @@ class MedicamentForm extends Form
             'name' => 'cons_indications',
             'attributes' => array(
                 'type'  => 'textarea',
+                'class' => 'form-control',
             ),
             'options' => array(
                 'label' => $translator->translate('Cons-indications', 'default', $lang),
@@ -63,6 +67,7 @@ class MedicamentForm extends Form
             'attributes' => array(
                 'type' => 'submit',
                 'label' => 'Ok',
+                'class' => 'btn btn-primary',
                 'id' => 'submitbutton',
             ),
         ));
