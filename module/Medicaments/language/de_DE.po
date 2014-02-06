@@ -2,117 +2,69 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendSkeletonApplication\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-05 23:45-0700\n"
-"PO-Revision-Date: 2012-07-06 08:18-0700\n"
-"Last-Translator: Evan Coury <me@evancoury.com>\n"
+"POT-Creation-Date: 2014-02-06 14:07+0100\n"
+"PO-Revision-Date: 2014-02-06 14:07+0100\n"
+"Last-Translator: \n"
 "Language-Team: ZF Contributors <zf-devteam@zend.com>\n"
-"Language: \n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: translate\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-Language: German\n"
-"X-Poedit-Country: GERMANY\n"
+"X-Generator: Poedit 1.6.3\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../view/layout/layout.phtml:6
-#: ../view/layout/layout.phtml:33
-msgid "Skeleton Application"
-msgstr ""
+#: ../src/Medicaments/Controller/ContactController.php:29
+msgid "Send"
+msgstr "Senden"
 
-#: ../view/layout/layout.phtml:36
-msgid "Home"
-msgstr "Startseite"
+#: ../src/Medicaments/Controller/IndexController.php:35
+msgid "Add"
+msgstr "Hinzufügen"
 
-#: ../view/layout/layout.phtml:50
-msgid "All rights reserved."
-msgstr "Alle Rechte vorbehalten."
+#: ../src/Medicaments/Form/ContactForm.php:26
+#: ../src/Medicaments/Form/MedicamentForm.php:31
+#: ../view/medicaments/index/index.phtml:13
+msgid "Name"
+msgstr "Name"
 
-#: ../view/application/index/index.phtml:2
-#, php-format
-msgid "Welcome to %sZend Framework 2%s"
-msgstr "Willkommen zu dem %sZend Framework 2%s"
+#: ../src/Medicaments/Form/ContactForm.php:35
+msgid "Last name"
+msgstr "Nachname"
 
-#: ../view/application/index/index.phtml:3
-#, php-format
-msgid "Congratulations! You have successfully installed the %sZF2 Skeleton Application%s. You are currently running Zend Framework version %s. This skeleton can serve as a simple starting point for you to begin building your application on ZF2."
-msgstr "Herzlichen Glückwunsch! Sie haben die %sZF2 Skeleton Application%s erfolgreich installiert und benutzen gerade die Version %s des Zend Frameworks. Dieses Gerüst kann Ihnen als Einstiegspunkt, für Ihre weitere Entwicklung, basierend auf dem Zend Framework 2, dienen."
+#: ../src/Medicaments/Form/ContactForm.php:44
+msgid "E-mail"
+msgstr "E-mail"
 
-#: ../view/application/index/index.phtml:4
-msgid "Fork Zend Framework 2 on GitHub"
-msgstr "Fork Zend Framework 2 auf GitHub"
+#: ../src/Medicaments/Form/ContactForm.php:54
+msgid "Phone"
+msgstr "Telefon"
 
-#: ../view/application/index/index.phtml:10
-msgid "Follow Development"
-msgstr "Folge der Entwicklung"
-
-#: ../view/application/index/index.phtml:11
-#, php-format
-msgid "Zend Framework 2 is under active development. If you are interested in following the development of ZF2, there is a special ZF2 portal on the official Zend Framework website which provides links to the ZF2 %swiki%s, %sdev blog%s, %sissue tracker%s, and much more. This is a great resource for staying up to date with the latest developments!"
-msgstr "Das Zend Framework 2 wird z.Z. aktiv weiterentwickelt.  Sollten Sie daran interessiert sein, die Entwicklung von ZF2 zu verfolgen, so bietet Ihnen die offizielle Webseite einen eigens für das Zend Framework 2 eingerichteten Bereich, auf der Sie Verlinkungen zum ZF2 %sWiki%s, %sEntwickler Blog%s, einem %sFehlerverfolgungssystem%s und noch vielem mehr finden. Dieser Bereich ist eine hervorragende Quelle um stets aktuell zu bleiben."
-
-#: ../view/application/index/index.phtml:12
-msgid "ZF2 Development Portal"
-msgstr "ZF2 Entwickler Portal"
-
-#: ../view/application/index/index.phtml:16
-msgid "Discover Modules"
-msgstr "Entdecken Sie Module"
-
-#: ../view/application/index/index.phtml:17
-#, php-format
-msgid "The community is working on developing a community site to serve as a repository and gallery for ZF2 modules. The project is available %son GitHub%s. The site is currently live and currently contains a list of some of the modules already available for ZF2."
-msgstr "Die Community arbeitet momentan an einer Community Seite, welche als Galerie für ZF2 Module dient. Dieses Projekt ist %sauf GitHub%s verfügbar. Die Webseite ist bereits Online und enthält eine Liste mit schon veröffentlichten Modulen für das Zend Framework 2."
-
-#: ../view/application/index/index.phtml:18
-msgid "Explore ZF2 Modules"
-msgstr "Erkunden Sie ZF2 Module"
-
-#: ../view/application/index/index.phtml:22
-msgid "Help &amp; Support"
-msgstr "Hilfe &amp; Support"
-
-#: ../view/application/index/index.phtml:23
-#, php-format
-msgid "If you need any help or support while developing with ZF2, you may reach us via IRC: %s#zftalk on Freenode%s. We'd love to hear any questions or feedback you may have regarding the beta releases. Alternatively, you may subscribe and post questions to the %smailing lists%s."
-msgstr "Sollten Sie Hilfe jeglicher Art bei der Entwicklung mit dem Zend Framework 2 benötigen, kontaktieren Sie uns doch einfach über das IRC: %s#zftalk on Freenode%s. Wir freuen uns darauf, Ihnen bei Ihren Fragen zu helfen oder aber auch Ihre Meinung bezüglich der Beta Versionen zu hören. Alternativ können Sie auch die %smailing lists%s abonnieren und Ihre Fragen dort stellen."
-
-#: ../view/application/index/index.phtml:24
-msgid "Ping us on IRC"
-msgstr "Schreiben Sie uns im IRC an"
-
-#: ../view/error/index.phtml:1
-msgid "An error occurred"
-msgstr "Ein Fehler ist aufgetreten"
-
-#: ../view/error/index.phtml:8
-msgid "Additional information"
-msgstr "Zusätzliche Information"
-
-#: ../view/error/index.phtml:11
-#: ../view/error/index.phtml:35
-msgid "File"
-msgstr "Datei"
-
-#: ../view/error/index.phtml:15
+#: ../src/Medicaments/Form/ContactForm.php:63 ../view/error/404.phtml:60
+#: ../view/error/404.phtml:84 ../view/error/index.phtml:15
 #: ../view/error/index.phtml:39
 msgid "Message"
 msgstr "Meldung"
 
-#: ../view/error/index.phtml:19
-#: ../view/error/index.phtml:43
-#: ../view/error/404.phtml:55
-msgid "Stack trace"
-msgstr "Stapelüberwachung"
+#: ../src/Medicaments/Form/ContactForm.php:68
+msgid "captcha"
+msgstr "captcha"
 
-#: ../view/error/index.phtml:29
-msgid "Previous exceptions"
-msgstr "Vorherige Ausnahme"
+#: ../src/Medicaments/Form/MedicamentForm.php:40
+#: ../view/medicaments/index/index.phtml:14
+msgid "Molecule"
+msgstr "Molekül"
 
-#: ../view/error/index.phtml:58
-msgid "No Exception available"
-msgstr "Es ist keine Ausnahme verfügbar"
+#: ../src/Medicaments/Form/MedicamentForm.php:49
+#: ../view/medicaments/index/index.phtml:15
+msgid "Indications"
+msgstr "Indikationen"
+
+#: ../src/Medicaments/Form/MedicamentForm.php:58
+#: ../view/medicaments/index/index.phtml:16
+msgid "Cons-indications"
+msgstr "Cons-Angaben"
 
 #: ../view/error/404.phtml:1
 msgid "A 404 error occurred"
@@ -120,11 +72,15 @@ msgstr "Es trat ein 404 Fehler auf"
 
 #: ../view/error/404.phtml:10
 msgid "The requested controller was unable to dispatch the request."
-msgstr "Der angeforderte Controller war nicht in der Lage die Anfrage zu verarbeiten."
+msgstr ""
+"Der angeforderte Controller war nicht in der Lage die Anfrage zu verarbeiten."
 
 #: ../view/error/404.phtml:13
-msgid "The requested controller could not be mapped to an existing controller class."
-msgstr "Der angeforderte Controller konnte keiner Controller Klasse zugeordnet werden."
+msgid ""
+"The requested controller could not be mapped to an existing controller class."
+msgstr ""
+"Der angeforderte Controller konnte keiner Controller Klasse zugeordnet "
+"werden."
 
 #: ../view/error/404.phtml:16
 msgid "The requested controller was not dispatchable."
@@ -136,7 +92,9 @@ msgstr "Für die angeforderte URL konnte keine Übereinstimmung gefunden werden.
 
 #: ../view/error/404.phtml:22
 msgid "We cannot determine at this time why a 404 was generated."
-msgstr "Zu diesem Zeitpunkt ist es uns nicht möglich zu bestimmen, warum ein 404 Fehler aufgetreten ist."
+msgstr ""
+"Zu diesem Zeitpunkt ist es uns nicht möglich zu bestimmen, warum ein 404 "
+"Fehler aufgetreten ist."
 
 #: ../view/error/404.phtml:34
 msgid "Controller"
@@ -147,7 +105,216 @@ msgstr "Controller"
 msgid "resolves to %s"
 msgstr "wird aufgelöst in %s"
 
-#: ../view/error/404.phtml:51
-msgid "Exception"
-msgstr "Ausnahme"
+#: ../view/error/404.phtml:53 ../view/error/index.phtml:8
+msgid "Additional information"
+msgstr "Zusätzliche Information"
 
+#: ../view/error/404.phtml:56 ../view/error/404.phtml:80
+#: ../view/error/index.phtml:11 ../view/error/index.phtml:35
+msgid "File"
+msgstr "Datei"
+
+#: ../view/error/404.phtml:64 ../view/error/404.phtml:88
+#: ../view/error/index.phtml:19 ../view/error/index.phtml:43
+msgid "Stack trace"
+msgstr "Stapelüberwachung"
+
+#: ../view/error/404.phtml:74 ../view/error/index.phtml:29
+msgid "Previous exceptions"
+msgstr "Vorherige Ausnahme"
+
+#: ../view/error/404.phtml:103 ../view/error/index.phtml:58
+msgid "No Exception available"
+msgstr "Es ist keine Ausnahme verfügbar"
+
+#: ../view/error/index.phtml:1
+msgid "An error occurred"
+msgstr "Ein Fehler ist aufgetreten"
+
+#: ../view/layout/layout.phtml:6 ../view/layout/layout.phtml:37
+msgid "Skeleton Application"
+msgstr "Skeleton-Anwendung"
+
+#: ../view/layout/layout.phtml:41
+msgid "Home"
+msgstr "Startseite"
+
+#: ../view/layout/layout.phtml:42
+msgid "Configuration"
+msgstr "Konfiguration"
+
+#: ../view/layout/layout.phtml:43
+msgid "Contact"
+msgstr "Kontakt"
+
+#: ../view/layout/layout.phtml:48
+msgid "Language"
+msgstr "Sprache"
+
+#: ../view/layout/layout.phtml:53
+msgid "French"
+msgstr "Französisch"
+
+#: ../view/layout/layout.phtml:58
+msgid "English"
+msgstr "Englisch"
+
+#: ../view/layout/layout.phtml:63
+msgid "Spanish"
+msgstr "Spanisch"
+
+#: ../view/layout/layout.phtml:68
+msgid "Deutsch"
+msgstr "Deutsch"
+
+#: ../view/layout/layout.phtml:81
+msgid "by"
+msgstr "von"
+
+#: ../view/layout/layout.phtml:81
+msgid "and"
+msgstr "und"
+
+#: ../view/layout/layout.phtml:81
+msgid "All rights reserved."
+msgstr "Alle Rechte vorbehalten."
+
+#: ../view/layout/layout.phtml:89
+#, fuzzy
+msgid "controller"
+msgstr "Controller"
+
+#: ../view/layout/layout.phtml:90
+msgid "action"
+msgstr "Aktion"
+
+#: ../view/layout/layout.phtml:91
+msgid "view"
+msgstr "blick"
+
+#: ../view/medicaments/configuration/index.phtml:2
+msgid "Configuration file"
+msgstr "Konfiguratinsdatei"
+
+#: ../view/medicaments/configuration/index.phtml:13
+msgid "File type"
+msgstr "Dateityp"
+
+#: ../view/medicaments/configuration/index.phtml:14
+msgid "Environment"
+msgstr "Umwelt"
+
+#: ../view/medicaments/configuration/index.phtml:29
+msgid "Use this file"
+msgstr "Verwenden Sie diese Datei"
+
+#: ../view/medicaments/contact/index.phtml:2
+msgid "Contact us"
+msgstr "Kontaktieren Sie uns"
+
+#: ../view/medicaments/index/add.phtml:2
+#: ../view/medicaments/index/index.phtml:48
+msgid "Add new drug"
+msgstr "In neuen Medikaments"
+
+#: ../view/medicaments/index/delete.phtml:2
+msgid "Delete drug"
+msgstr "Drogen Löschen"
+
+#: ../view/medicaments/index/delete.phtml:7
+msgid "Are you sure that you want to delete"
+msgstr "Sind Sie sicher, dass Sie löschen möchten"
+
+#: ../view/medicaments/index/delete.phtml:19
+msgid "Yes"
+msgstr "Ja"
+
+#: ../view/medicaments/index/delete.phtml:20
+msgid "No"
+msgstr "Nicht"
+
+#: ../view/medicaments/index/index.phtml:2
+msgid "Drugs list"
+msgstr "Drogen-Liste"
+
+#: ../view/medicaments/index/index.phtml:33
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: ../view/medicaments/index/index.phtml:38
+msgid "Delete"
+msgstr "Iöschen"
+
+#~ msgid "Welcome to %sZend Framework 2%s"
+#~ msgstr "Willkommen zu dem %sZend Framework 2%s"
+
+#~ msgid ""
+#~ "Congratulations! You have successfully installed the %sZF2 Skeleton "
+#~ "Application%s. You are currently running Zend Framework version %s. This "
+#~ "skeleton can serve as a simple starting point for you to begin building "
+#~ "your application on ZF2."
+#~ msgstr ""
+#~ "Herzlichen Glückwunsch! Sie haben die %sZF2 Skeleton Application%s "
+#~ "erfolgreich installiert und benutzen gerade die Version %s des Zend "
+#~ "Frameworks. Dieses Gerüst kann Ihnen als Einstiegspunkt, für Ihre weitere "
+#~ "Entwicklung, basierend auf dem Zend Framework 2, dienen."
+
+#~ msgid "Fork Zend Framework 2 on GitHub"
+#~ msgstr "Fork Zend Framework 2 auf GitHub"
+
+#~ msgid "Follow Development"
+#~ msgstr "Folge der Entwicklung"
+
+#~ msgid ""
+#~ "Zend Framework 2 is under active development. If you are interested in "
+#~ "following the development of ZF2, there is a special ZF2 portal on the "
+#~ "official Zend Framework website which provides links to the ZF2 %swiki%s, "
+#~ "%sdev blog%s, %sissue tracker%s, and much more. This is a great resource "
+#~ "for staying up to date with the latest developments!"
+#~ msgstr ""
+#~ "Das Zend Framework 2 wird z.Z. aktiv weiterentwickelt.  Sollten Sie daran "
+#~ "interessiert sein, die Entwicklung von ZF2 zu verfolgen, so bietet Ihnen "
+#~ "die offizielle Webseite einen eigens für das Zend Framework 2 "
+#~ "eingerichteten Bereich, auf der Sie Verlinkungen zum ZF2 %sWiki%s, "
+#~ "%sEntwickler Blog%s, einem %sFehlerverfolgungssystem%s und noch vielem "
+#~ "mehr finden. Dieser Bereich ist eine hervorragende Quelle um stets "
+#~ "aktuell zu bleiben."
+
+#~ msgid "ZF2 Development Portal"
+#~ msgstr "ZF2 Entwickler Portal"
+
+#~ msgid "Discover Modules"
+#~ msgstr "Entdecken Sie Module"
+
+#~ msgid ""
+#~ "The community is working on developing a community site to serve as a "
+#~ "repository and gallery for ZF2 modules. The project is available %son "
+#~ "GitHub%s. The site is currently live and currently contains a list of "
+#~ "some of the modules already available for ZF2."
+#~ msgstr ""
+#~ "Die Community arbeitet momentan an einer Community Seite, welche als "
+#~ "Galerie für ZF2 Module dient. Dieses Projekt ist %sauf GitHub%s "
+#~ "verfügbar. Die Webseite ist bereits Online und enthält eine Liste mit "
+#~ "schon veröffentlichten Modulen für das Zend Framework 2."
+
+#~ msgid "Explore ZF2 Modules"
+#~ msgstr "Erkunden Sie ZF2 Module"
+
+#~ msgid "Help &amp; Support"
+#~ msgstr "Hilfe &amp; Support"
+
+#~ msgid ""
+#~ "If you need any help or support while developing with ZF2, you may reach "
+#~ "us via IRC: %s#zftalk on Freenode%s. We'd love to hear any questions or "
+#~ "feedback you may have regarding the beta releases. Alternatively, you may "
+#~ "subscribe and post questions to the %smailing lists%s."
+#~ msgstr ""
+#~ "Sollten Sie Hilfe jeglicher Art bei der Entwicklung mit dem Zend "
+#~ "Framework 2 benötigen, kontaktieren Sie uns doch einfach über das IRC: "
+#~ "%s#zftalk on Freenode%s. Wir freuen uns darauf, Ihnen bei Ihren Fragen zu "
+#~ "helfen oder aber auch Ihre Meinung bezüglich der Beta Versionen zu hören. "
+#~ "Alternativ können Sie auch die %smailing lists%s abonnieren und Ihre "
+#~ "Fragen dort stellen."
+
+#~ msgid "Ping us on IRC"
+#~ msgstr "Schreiben Sie uns im IRC an"

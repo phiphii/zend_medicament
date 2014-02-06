@@ -21,8 +21,11 @@ class LanguageController extends AbstractActionController
     		case 2:
     			$lang = 'en_US';
     			break;
-    		case 3:
-    			$lang = 'es_ES';
+            case 3:
+                $lang = 'es_ES';
+                break;
+    		case 4:
+    			$lang = 'de_DE';
     			break;
     		default:
     			$lang = 'fr_FR';

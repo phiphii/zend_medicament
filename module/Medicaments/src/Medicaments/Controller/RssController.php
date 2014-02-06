@@ -13,9 +13,6 @@ class RssController extends AbstractActionController
 
     public function indexAction()
     {
-    	/**
-		 * Create the parent feed
-		 */
 		$feed = new Feed();
 		$feed->setTitle('Médicaments');
 		$feed->setLink('http://localhost/Projet_Zend/public/medicaments');
@@ -23,10 +20,6 @@ class RssController extends AbstractActionController
 		$feed->setFeedLink('http://localhost/Projet_Zend/public/medicaments/rss', 'rss');
 		$feed->setDateModified(time());
 
-		/**
-		 * Add one or more entries. Note that entries must
-		 * be manually added once created.
-		 */
 		foreach ($this->getMedicamentsTable()->fetchAll() as $medicament)
 		{
 			$entry = $feed->createEntry();
