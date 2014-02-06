@@ -13,6 +13,7 @@
 
 use Zend\Session\Container;
 use Zend\Debug\Debug;
+require_once('vendor/zendframework/spyc/Spyc.php');
 
 $session = new Container('configuration');
 
@@ -34,7 +35,7 @@ if($session->offsetExists('config_file'))
 			break;
 
 		case 'yaml':
-			$reader = new Zend\Config\Reader\Yaml();
+			$reader = new Zend\Config\Reader\Yaml(array('Spyc', 'YAMLLoadString'));
 			$data = $reader->fromFile('config/config.yaml');
 			break;
 
