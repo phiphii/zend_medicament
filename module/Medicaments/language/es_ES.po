@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendSkeletonApplication\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-01 21:01+0100\n"
-"PO-Revision-Date: 2014-02-01 21:07+0100\n"
+"POT-Creation-Date: 2014-02-06 19:29+0100\n"
+"PO-Revision-Date: 2014-02-06 19:30+0100\n"
 "Last-Translator: \n"
 "Language-Team: ZF Contributors <zf-devteam@zend.com>\n"
 "Language: es_ES\n"
@@ -19,7 +19,7 @@ msgstr ""
 msgid "Send"
 msgstr "enviar"
 
-#: ../src/Medicaments/Controller/IndexController.php:35
+#: ../src/Medicaments/Controller/IndexController.php:43
 msgid "Add"
 msgstr "añadir"
 
@@ -37,17 +37,17 @@ msgstr "Nombre de pila"
 msgid "E-mail"
 msgstr "E-mail"
 
-#: ../src/Medicaments/Form/ContactForm.php:54
+#: ../src/Medicaments/Form/ContactForm.php:53
 msgid "Phone"
 msgstr "Teléfono"
 
-#: ../src/Medicaments/Form/ContactForm.php:63 ../view/error/404.phtml:60
+#: ../src/Medicaments/Form/ContactForm.php:62 ../view/error/404.phtml:60
 #: ../view/error/404.phtml:84 ../view/error/index.phtml:15
 #: ../view/error/index.phtml:39
 msgid "Message"
 msgstr "Mensaje"
 
-#: ../src/Medicaments/Form/ContactForm.php:68
+#: ../src/Medicaments/Form/ContactForm.php:67
 msgid "captcha"
 msgstr "captcha"
 
@@ -144,43 +144,51 @@ msgstr "Configuración"
 msgid "Contact"
 msgstr "Contacto"
 
-#: ../view/layout/layout.phtml:48
+#: ../view/layout/layout.phtml:44
+msgid "RSS"
+msgstr "RSS"
+
+#: ../view/layout/layout.phtml:49
 msgid "Language"
 msgstr "Idioma"
 
-#: ../view/layout/layout.phtml:53
+#: ../view/layout/layout.phtml:54
 msgid "French"
 msgstr "Francés"
 
-#: ../view/layout/layout.phtml:58
+#: ../view/layout/layout.phtml:59
 msgid "English"
 msgstr "Inglés"
 
-#: ../view/layout/layout.phtml:63
+#: ../view/layout/layout.phtml:64
 msgid "Spanish"
 msgstr "Español"
 
-#: ../view/layout/layout.phtml:76
+#: ../view/layout/layout.phtml:69
+msgid "Deutsch"
+msgstr "Deutsch"
+
+#: ../view/layout/layout.phtml:82
 msgid "by"
 msgstr "por"
 
-#: ../view/layout/layout.phtml:76
+#: ../view/layout/layout.phtml:82
 msgid "and"
 msgstr "y"
 
-#: ../view/layout/layout.phtml:76
+#: ../view/layout/layout.phtml:82
 msgid "All rights reserved."
 msgstr "Todos los derechos reservados"
 
-#: ../view/layout/layout.phtml:84
+#: ../view/layout/layout.phtml:90
 msgid "controller"
 msgstr "controlador"
 
-#: ../view/layout/layout.phtml:85
+#: ../view/layout/layout.phtml:91
 msgid "action"
 msgstr "acción"
 
-#: ../view/layout/layout.phtml:86
+#: ../view/layout/layout.phtml:92
 msgid "view"
 msgstr "vista"
 
@@ -205,7 +213,7 @@ msgid "Contact us"
 msgstr "Contáctenos"
 
 #: ../view/medicaments/index/add.phtml:2
-#: ../view/medicaments/index/index.phtml:48
+#: ../view/medicaments/index/index.phtml:63
 msgid "Add new drug"
 msgstr "Añadir nuevo medicamento"
 
@@ -229,13 +237,21 @@ msgstr "No"
 msgid "Drugs list"
 msgstr "Lista de Drogas "
 
-#: ../view/medicaments/index/index.phtml:33
+#: ../view/medicaments/index/index.phtml:32
 msgid "Edit"
 msgstr "Editar"
 
-#: ../view/medicaments/index/index.phtml:38
+#: ../view/medicaments/index/index.phtml:37
 msgid "Delete"
 msgstr "Borrar"
+
+#: ../view/partial/paginator.phtml:7 ../view/partial/paginator.phtml:13
+msgid "Previous"
+msgstr "Anterior"
+
+#: ../view/partial/paginator.phtml:36 ../view/partial/paginator.phtml:42
+msgid "Next"
+msgstr "Próximo"
 
 #~ msgid "name"
 #~ msgstr "nombre"

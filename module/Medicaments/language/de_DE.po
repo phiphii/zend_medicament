@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendSkeletonApplication\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-06 14:07+0100\n"
-"PO-Revision-Date: 2014-02-06 14:07+0100\n"
+"POT-Creation-Date: 2014-02-06 19:28+0100\n"
+"PO-Revision-Date: 2014-02-06 19:29+0100\n"
 "Last-Translator: \n"
 "Language-Team: ZF Contributors <zf-devteam@zend.com>\n"
 "Language: de_DE\n"
@@ -19,7 +19,7 @@ msgstr ""
 msgid "Send"
 msgstr "Senden"
 
-#: ../src/Medicaments/Controller/IndexController.php:35
+#: ../src/Medicaments/Controller/IndexController.php:43
 msgid "Add"
 msgstr "Hinzufügen"
 
@@ -37,17 +37,17 @@ msgstr "Nachname"
 msgid "E-mail"
 msgstr "E-mail"
 
-#: ../src/Medicaments/Form/ContactForm.php:54
+#: ../src/Medicaments/Form/ContactForm.php:53
 msgid "Phone"
 msgstr "Telefon"
 
-#: ../src/Medicaments/Form/ContactForm.php:63 ../view/error/404.phtml:60
+#: ../src/Medicaments/Form/ContactForm.php:62 ../view/error/404.phtml:60
 #: ../view/error/404.phtml:84 ../view/error/index.phtml:15
 #: ../view/error/index.phtml:39
 msgid "Message"
 msgstr "Meldung"
 
-#: ../src/Medicaments/Form/ContactForm.php:68
+#: ../src/Medicaments/Form/ContactForm.php:67
 msgid "captcha"
 msgstr "captcha"
 
@@ -147,48 +147,52 @@ msgstr "Konfiguration"
 msgid "Contact"
 msgstr "Kontakt"
 
-#: ../view/layout/layout.phtml:48
+#: ../view/layout/layout.phtml:44
+msgid "RSS"
+msgstr "RSS"
+
+#: ../view/layout/layout.phtml:49
 msgid "Language"
 msgstr "Sprache"
 
-#: ../view/layout/layout.phtml:53
+#: ../view/layout/layout.phtml:54
 msgid "French"
 msgstr "Französisch"
 
-#: ../view/layout/layout.phtml:58
+#: ../view/layout/layout.phtml:59
 msgid "English"
 msgstr "Englisch"
 
-#: ../view/layout/layout.phtml:63
+#: ../view/layout/layout.phtml:64
 msgid "Spanish"
 msgstr "Spanisch"
 
-#: ../view/layout/layout.phtml:68
+#: ../view/layout/layout.phtml:69
 msgid "Deutsch"
 msgstr "Deutsch"
 
-#: ../view/layout/layout.phtml:81
+#: ../view/layout/layout.phtml:82
 msgid "by"
 msgstr "von"
 
-#: ../view/layout/layout.phtml:81
+#: ../view/layout/layout.phtml:82
 msgid "and"
 msgstr "und"
 
-#: ../view/layout/layout.phtml:81
+#: ../view/layout/layout.phtml:82
 msgid "All rights reserved."
 msgstr "Alle Rechte vorbehalten."
 
-#: ../view/layout/layout.phtml:89
+#: ../view/layout/layout.phtml:90
 #, fuzzy
 msgid "controller"
 msgstr "Controller"
 
-#: ../view/layout/layout.phtml:90
+#: ../view/layout/layout.phtml:91
 msgid "action"
 msgstr "Aktion"
 
-#: ../view/layout/layout.phtml:91
+#: ../view/layout/layout.phtml:92
 msgid "view"
 msgstr "blick"
 
@@ -213,7 +217,7 @@ msgid "Contact us"
 msgstr "Kontaktieren Sie uns"
 
 #: ../view/medicaments/index/add.phtml:2
-#: ../view/medicaments/index/index.phtml:48
+#: ../view/medicaments/index/index.phtml:63
 msgid "Add new drug"
 msgstr "In neuen Medikaments"
 
@@ -237,13 +241,21 @@ msgstr "Nicht"
 msgid "Drugs list"
 msgstr "Drogen-Liste"
 
-#: ../view/medicaments/index/index.phtml:33
+#: ../view/medicaments/index/index.phtml:32
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: ../view/medicaments/index/index.phtml:38
+#: ../view/medicaments/index/index.phtml:37
 msgid "Delete"
 msgstr "Iöschen"
+
+#: ../view/partial/paginator.phtml:7 ../view/partial/paginator.phtml:13
+msgid "Previous"
+msgstr "Früher"
+
+#: ../view/partial/paginator.phtml:36 ../view/partial/paginator.phtml:42
+msgid "Next"
+msgstr "Nächste"
 
 #~ msgid "Welcome to %sZend Framework 2%s"
 #~ msgstr "Willkommen zu dem %sZend Framework 2%s"
