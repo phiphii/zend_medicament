@@ -33,7 +33,7 @@ CREATE TABLE `configuration` (
   `environment` varchar(10) NOT NULL DEFAULT 'dev',
   `used` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Contenu de la table `configuration`
@@ -68,7 +68,7 @@ CREATE TABLE `medicaments` (
   `indications` text,
   `cons_indications` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `medicaments`
@@ -78,9 +78,9 @@ INSERT INTO `medicaments` (`id`, `name`, `molecule`, `indications`, `cons_indica
 (1, 'Doliprane (production)', 'Paracétamole', 'Douleurs\r\nFièvre\r\nMaux de tête\r\nDouleurs dentaires\r\nCourbatures\r\nRègles douloureuses', 'Allergie au paracétamol\r\nMaladie grave du foie\r\nAllergie au blé'),
 (2, 'Advil (production)', 'Ibuprofène', 'Affections douloureuses d''intensité légère à modérée et/ou états fébriles\r\nDysménorrhées après recherche étiologique\r\nTraitement de la crise de la migraine légère à modérée, avec ou sans aura\r\nTraitement des douleurs modérées dans l''arthrose (hanche, genou)', 'Au-delà de 24 semaines d''aménorrhée (5 mois de grossesse révolus)\r\nHypersensibilité à l''ibuprofène ou à l''un des excipients du produit\r\nAntécédents d''asthme déclenchés par la prise d''ibuprofène ou de substences d''activité proche telles que: autres AINS, acide acétylsalicylique\r\nInsuffisance hépatique, rénale, cardiaque sévère'),
 (3, 'CodéDrill (production)', 'Codéine phosphate hémihydrate', 'Toux d\'irritation', 'p-hydroxybenzoate de méthyle sodique, saccharine sodique, caramel E 150'),
-(4, 'ANTARENE 100 MG CP PELLIC (production)', 'Ibuprofène', 'Toux d\'irritation', 'ANTARENE 100 mg Cpr pell B/40'),
-(5, 'ANTARENE 200 MG  (production)', 'Ibuprofène', 'Toux d\'irritation', 'ANTARENE 200 mg Cpr pell B/40'),
-(6, 'SPIFEN 200 MG CP  (production)', 'Ibuprofène', 'Maux de tête', 'SPIFEN 200 mg Cpr Plq/30');
+(4, 'Antarene 100 MG CP PELLIC (production)', 'Ibuprofène', 'Toux d\'irritation', 'Antarene 100 mg Cpr pell B/40'),
+(5, 'Antarene 200 MG  (production)', 'Ibuprofène', 'Toux d\'irritation', 'Antarene 200 mg Cpr pell B/40'),
+(6, 'Spifen 200 MG CP  (production)', 'Ibuprofène', 'Maux de tête', 'Spifen 200 mg Cpr Plq/30');
 
 use projet_zend_dev;
 
@@ -102,7 +102,7 @@ CREATE TABLE `configuration` (
   `environment` varchar(10) NOT NULL DEFAULT 'dev',
   `used` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Contenu de la table `configuration`
@@ -137,7 +137,7 @@ CREATE TABLE `medicaments` (
   `indications` text,
   `cons_indications` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `medicaments`
@@ -145,7 +145,11 @@ CREATE TABLE `medicaments` (
 
 INSERT INTO `medicaments` (`id`, `name`, `molecule`, `indications`, `cons_indications`) VALUES
 (1, 'Doliprane (dev)', 'Paracétamole', 'Douleurs\r\nFièvre\r\nMaux de tête\r\nDouleurs dentaires\r\nCourbatures\r\nRègles douloureuses', 'Allergie au paracétamol\r\nMaladie grave du foie\r\nAllergie au blé'),
-(2, 'Advil (dev)', 'Ibuprofène', 'Affections douloureuses d''intensité légère à modérée et/ou états fébriles\r\nDysménorrhées après recherche étiologique\r\nTraitement de la crise de la migraine légère à modérée, avec ou sans aura\r\nTraitement des douleurs modérées dans l''arthrose (hanche, genou)', 'Au-delà de 24 semaines d''aménorrhée (5 mois de grossesse révolus)\r\nHypersensibilité à l''ibuprofène ou à l''un des excipients du produit\r\nAntécédents d''asthme déclenchés par la prise d''ibuprofène ou de substences d''activité proche telles que: autres AINS, acide acétylsalicylique\r\nInsuffisance hépatique, rénale, cardiaque sévère');
+(2, 'Advil (dev)', 'Ibuprofène', 'Affections douloureuses d''intensité légère à modérée et/ou états fébriles\r\nDysménorrhées après recherche étiologique\r\nTraitement de la crise de la migraine légère à modérée, avec ou sans aura\r\nTraitement des douleurs modérées dans l''arthrose (hanche, genou)', 'Au-delà de 24 semaines d''aménorrhée (5 mois de grossesse révolus)\r\nHypersensibilité à l''ibuprofène ou à l''un des excipients du produit\r\nAntécédents d''asthme déclenchés par la prise d''ibuprofène ou de substences d''activité proche telles que: autres AINS, acide acétylsalicylique\r\nInsuffisance hépatique, rénale, cardiaque sévère'),
+(3, 'CodéDrill (dev)', 'Codéine phosphate hémihydrate', 'Toux d\'irritation', 'p-hydroxybenzoate de méthyle sodique, saccharine sodique, caramel E 150'),
+(4, 'Antarene 100 MG CP PELLIC (dev)', 'Ibuprofène', 'Toux d\'irritation', 'Antarene 100 mg Cpr pell B/40'),
+(5, 'Antarene 200 MG  (dev)', 'Ibuprofène', 'Toux d\'irritation', 'Antarene 200 mg Cpr pell B/40'),
+(6, 'Spifen 200 MG CP  (dev)', 'Ibuprofène', 'Maux de tête', 'Spifen 200 mg Cpr Plq/30');
 
 
 
@@ -168,7 +172,7 @@ CREATE TABLE `configuration` (
   `environment` varchar(10) NOT NULL DEFAULT 'dev',
   `used` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Contenu de la table `configuration`
@@ -203,7 +207,7 @@ CREATE TABLE `medicaments` (
   `indications` text,
   `cons_indications` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Contenu de la table `medicaments`
@@ -211,4 +215,8 @@ CREATE TABLE `medicaments` (
 
 INSERT INTO `medicaments` (`id`, `name`, `molecule`, `indications`, `cons_indications`) VALUES
 (1, 'Doliprane (recette)', 'Paracétamole', 'Douleurs\r\nFièvre\r\nMaux de tête\r\nDouleurs dentaires\r\nCourbatures\r\nRègles douloureuses', 'Allergie au paracétamol\r\nMaladie grave du foie\r\nAllergie au blé'),
-(2, 'Advil (recette)', 'Ibuprofène', 'Affections douloureuses d''intensité légère à modérée et/ou états fébriles\r\nDysménorrhées après recherche étiologique\r\nTraitement de la crise de la migraine légère à modérée, avec ou sans aura\r\nTraitement des douleurs modérées dans l''arthrose (hanche, genou)', 'Au-delà de 24 semaines d''aménorrhée (5 mois de grossesse révolus)\r\nHypersensibilité à l''ibuprofène ou à l''un des excipients du produit\r\nAntécédents d''asthme déclenchés par la prise d''ibuprofène ou de substences d''activité proche telles que: autres AINS, acide acétylsalicylique\r\nInsuffisance hépatique, rénale, cardiaque sévère');
+(2, 'Advil (recette)', 'Ibuprofène', 'Affections douloureuses d''intensité légère à modérée et/ou états fébriles\r\nDysménorrhées après recherche étiologique\r\nTraitement de la crise de la migraine légère à modérée, avec ou sans aura\r\nTraitement des douleurs modérées dans l''arthrose (hanche, genou)', 'Au-delà de 24 semaines d''aménorrhée (5 mois de grossesse révolus)\r\nHypersensibilité à l''ibuprofène ou à l''un des excipients du produit\r\nAntécédents d''asthme déclenchés par la prise d''ibuprofène ou de substences d''activité proche telles que: autres AINS, acide acétylsalicylique\r\nInsuffisance hépatique, rénale, cardiaque sévère'),
+(3, 'CodéDrill (recette)', 'Codéine phosphate hémihydrate', 'Toux d\'irritation', 'p-hydroxybenzoate de méthyle sodique, saccharine sodique, caramel E 150'),
+(4, 'Antarene 100 MG CP PELLIC (recette)', 'Ibuprofène', 'Toux d\'irritation', 'Antarene 100 mg Cpr pell B/40'),
+(5, 'Antarene 200 MG  (recette)', 'Ibuprofène', 'Toux d\'irritation', 'Antarene 200 mg Cpr pell B/40'),
+(6, 'Spifen 200 MG CP  (recette)', 'Ibuprofène', 'Maux de tête', 'Spifen 200 mg Cpr Plq/30');
