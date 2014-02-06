@@ -42,7 +42,7 @@ class ContactController extends AbstractActionController
 					        ->addTo('axel.bouaziz@hotmail.fr')
 					        ->setSubject('Someone wants to contact you (project Zend)');
 					$message->setBody(
-						$request->getPost('firstname') . $request->getPost('lastName') . 
+						$request->getPost('firstname') . ' ' . $request->getPost('lastName') . 
 						' sent you a message from the ZF application.
 						
 						Phone number: ' . $request->getPost('phone') .
