@@ -48,7 +48,6 @@ class ContactForm extends Form
             'name' => 'phone',
             'attributes' => array(
                 'type'  => 'tel',
-                'pattern'  => '^0[1-68]([-. ]?[0-9]{2}){4}$'
             ),
             'options' => array(
                 'label' => $translator->translate('Phone', 'default', $lang),
