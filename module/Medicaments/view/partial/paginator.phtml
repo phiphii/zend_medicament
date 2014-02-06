@@ -23,13 +23,17 @@
             <?php foreach ($this->pagesInRange as $page){ ?>
                 <?php if ($page != $this->current){ ?>
                     <!-- <button type="button" class="btn btn-link"> -->
-                        <li><a href="<?php echo $this->url($this->route);?>?page=<?php echo $page; ?>">
-                            <?php echo $page; ?>
-                        </a></li>
+                        <li>
+                            <a href="<?php echo $this->url($this->route);?>?page=<?php echo $page; ?>">
+                                <?php echo $page; ?>
+                            </a>
+                        </li>
                     <!-- </button> -->
                 <?php }else{ ?>
                     <!-- <button type="button" class="btn btn-link active"> -->
-                        <li class="active"><a href="#"><?php echo $page; ?></a></li>
+                        <li class="active">
+                            <a href="#"><?php echo $page; ?></a>
+                        </li>
                     <!-- </button> -->
                 <?php } ?>
             <?php } ?>
@@ -37,15 +41,19 @@
             <!-- Next page link -->
             <?php if (isset($this->next)){ ?>
                 <!-- <button type="button" class="btn btn-link"> -->
-                    <li class="active"><a href="<?php echo $this->url($this->route); ?>?page=<?php echo $this->next; ?>">
-                        <?php echo $this->translate('Next'); ?>
-                    </a></li>
+                    <li>
+                        <a href="<?php echo $this->url($this->route); ?>?page=<?php echo $this->next; ?>">
+                            <?php echo $this->translate('Next'); ?>
+                        </a>
+                    </li>
                 <!-- </button> -->
             <?php }else{ ?>
                 <!-- <button type="button" class="btn btn-link disabled"> -->
-                    <li class="disabled"><a href="#">
-                        <?php echo $this->translate('Next'); ?>
-                    </a></li>
+                    <li class="disabled">
+                        <a href="#">
+                            <?php echo $this->translate('Next'); ?>
+                        </a>
+                    </li>
                 <!-- </button> -->
             <?php } ?>
         </ul>
