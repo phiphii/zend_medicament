@@ -10,12 +10,12 @@ $form->setAttribute('action', $this->url('medicaments', array('action' => 'add')
 $form->prepare();
 echo $this->form()->openTag($form);
 
-echo $this->formHidden($form->get('id'));
-echo $this->formRow($form->get('name'));
-echo $this->formRow($form->get('molecule'));
-echo $this->formRow($form->get('indications'));
-echo $this->formRow($form->get('cons_indications'));
-echo $this->formSubmit($form->get('submit'));
+echo "<p>".$this->formHidden($form->get('id'))."</p>";
+echo "<p>".$this->formRow($form->get('name'))."</p>";
+echo "<p>".$this->formRow($form->get('molecule'))."</p>";
+echo "<p>".$this->formRow($form->get('indications'))."</p>";
+echo "<p>".$this->formRow($form->get('cons_indications'))."</p>";
+echo "<p>".$this->formSubmit($form->get('submit'))."</p>";
 
 echo $this->form()->closeTag();
 ?>

@@ -39,3 +39,9 @@ div.container a.brand {
 #contact-form span {
     margin: 10px;
 }
+#edit-medicament-form span{
+  margin: 10px;
+}
+#edit-medicament-form li{
+  color: #DB4632;
+}
