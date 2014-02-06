@@ -2,46 +2,34 @@
     <div class="pagination pagination-centered">
             <!-- Previous page link -->
             <?php if (isset($this->previous)){ ?>
-                <button type="button" class="btn btn-link">
                     <a href="<?php echo $this->url($this->route); ?>?page=<?php echo $this->previous; ?>">
                         <?php echo $this->translate('Previous'); ?>
                     </a>
-                </button>
             <?php }else{ ?>
-                <button class="btn btn-link disabled">
                     <a href="#">
                         <?php echo $this->translate('Previous'); ?>
                     </a>
-                </button>
             <?php } ?>
             <!-- Numbered page links -->
             <?php foreach ($this->pagesInRange as $page){ ?>
                 <?php if ($page != $this->current){ ?>
-                    <button type="button" class="btn btn-link">
                         <a href="<?php echo $this->url($this->route);?>?page=<?php echo $page; ?>">
                             <?php echo $page; ?>
                         </a>
-                    </button>
                 <?php }else{ ?>
-                    <button type="button" class="btn btn-link active">
                         <a href="#"><?php echo $page; ?></a>
-                    </button>
                 <?php } ?>
             <?php } ?>
 
             <!-- Next page link -->
             <?php if (isset($this->next)){ ?>
-                <button type="button" class="btn btn-link">
                     <a href="<?php echo $this->url($this->route); ?>?page=<?php echo $this->next; ?>">
                         <?php echo $this->translate('Next'); ?>
                     </a>
-                </button>
             <?php }else{ ?>
-                <button type="button" class="btn btn-link disabled">
                     <a href="#">
                         <?php echo $this->translate('Next'); ?>
                     </a>
-                </button>
             <?php } ?>
     </div>
 <?php } ?>
