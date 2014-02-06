@@ -10,13 +10,13 @@ $form->setAttribute('action', $this->url('contact', array('action' => 'send')));
 $form->prepare();
 echo $this->form()->openTag($form);
 
-echo $this->formRow($form->get('firstname'));
-echo $this->formRow($form->get('lastName'));
-echo $this->formRow($form->get('email'));
-echo $this->formRow($form->get('phone'));
-echo $this->formRow($form->get('message'));
-echo $this->formRow($form->get('captcha'));
-echo $this->formSubmit($form->get('submit'));
+echo "<p>".$this->formRow($form->get('firstname'))."</p>";
+echo "<p>".$this->formRow($form->get('lastName'))."</p>";
+echo "<p>".$this->formRow($form->get('email'))."</p>";
+echo "<p>".$this->formRow($form->get('phone'))."</p>";
+echo "<p>".$this->formRow($form->get('message'))."</p>";
+echo "<p>".$this->formRow($form->get('captcha'))."</p>";
+echo "<p>".$this->formSubmit($form->get('submit'))."</p>";
 
 echo $this->form()->closeTag();
 ?>
