@@ -43,7 +43,17 @@ foreach ($medicaments as $medicament)
 <?php
 if(count($medicaments) > 0)
 {
-	echo $this->paginationControl($medicaments, 'sliding', array('partial/paginator.phtml', 'Medicaments'), array('route' => 'medicaments'));
+	echo $this->paginationControl(
+		$medicaments, 
+		'sliding', 
+		array(
+			'partial/paginator.phtml', 
+			'Medicaments',
+		), 
+		array(
+			'route' => 'medicaments',
+		)
+	);
 	echo '<br />';
 }
 ?>
