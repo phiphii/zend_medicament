@@ -21,6 +21,7 @@ class ContactForm extends Form
             'name' => 'firstname',
             'attributes' => array(
                 'type'  => 'text',
+                'class' => 'form-control',
             ),
             'options' => array(
                 'label' => $translator->translate('Name', 'default', $lang),
@@ -30,6 +31,7 @@ class ContactForm extends Form
             'name' => 'lastName',
             'attributes' => array(
                 'type'  => 'text',
+                'class' => 'form-control',
             ),
             'options' => array(
                 'label' => $translator->translate('Last name', 'default', $lang),
@@ -39,6 +41,7 @@ class ContactForm extends Form
             'name' => 'email',
             'attributes' => array(
                 'type'  => 'text',
+                'class' => 'form-control',
             ),
             'options' => array(
                 'label' => $translator->translate('E-mail', 'default', $lang),
@@ -48,6 +51,7 @@ class ContactForm extends Form
             'name' => 'phone',
             'attributes' => array(
                 'type'  => 'tel',
+                'class' => 'form-control',
             ),
             'options' => array(
                 'label' => $translator->translate('Phone', 'default', $lang),
@@ -57,6 +61,7 @@ class ContactForm extends Form
             'name' => 'message',
             'attributes' => array(
                 'type'  => 'textarea',
+                'class' => 'form-control',
             ),
             'options' => array(
                 'label' => $translator->translate('Message', 'default', $lang),
@@ -65,6 +70,9 @@ class ContactForm extends Form
         $this->add(array(
             'type' => 'Zend\Form\Element\Captcha',
             'name' => $translator->translate('captcha', 'default', $lang),
+            'attributes' => array(
+                'class' => 'form-control',
+            ),
             'options' => array(
                 'label' => 'Please verify you are human',
                 'captcha' => new Captcha\Dumb(),
@@ -75,6 +83,7 @@ class ContactForm extends Form
             'attributes' => array(
                 'type' => 'submit',
                 'label' => 'Ok',
+                'class' => 'btn btn-primary',
                 'id' => 'submitbutton',
             ),
         ));
