@@ -18,10 +18,18 @@ class IndexController extends AbstractActionController
     {
         // Initialize Zend\Session container in order to send it to our view
         $session = new Container('configuration');
+
+        /*
+         * PAGINIATION
+         */
+        $paginator = $this->getMedicamentsTable()->fetchAll(true);
+        $paginator->setCurrentPageNumber((int)$this->params()->fromQuery('page', 1));
+        $paginator->setItemCountPerPage(3);
+
         return new ViewModel(
 		        		array(
 		        			'session' => $session,
-		        			'medicaments' => $this->getMedicamentsTable()->fetchAll(),
+		        			'medicaments' => $paginator,
 	        			)
 		        	);
     }

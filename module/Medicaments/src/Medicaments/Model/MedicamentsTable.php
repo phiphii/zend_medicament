@@ -2,6 +2,10 @@
 namespace Medicaments\Model;
 
 use Zend\Db\TableGateway\TableGateway;
+use Zend\Db\ResultSet\ResultSet;
+use Zend\Db\Sql\Select;
+use Zend\Paginator\Adapter\DbSelect;
+use Zend\Paginator\Paginator;
 
 class MedicamentsTable
 {
@@ -12,8 +16,16 @@ class MedicamentsTable
         $this->tableGateway = $tableGateway;
     }
 
-    public function fetchAll()
+    public function fetchAll($paginated = false)
     {
+        if($paginated) {
+            $select             = new Select('medicaments');
+            $resultSetPrototype = new ResultSet();
+            $resultSetPrototype->setArrayObjectPrototype(new Medicaments());
+            $paginatorAdapter   = new DbSelect($select, $this->tableGateway->getAdapter(), $resultSetPrototype);
+            $paginator          = new Paginator($paginatorAdapter);
+            return $paginator;
+        }
         $resultSet = $this->tableGateway->select();
         return $resultSet;
     }

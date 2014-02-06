@@ -20,7 +20,6 @@ echo '<h1>' . $this->escapeHtml($title) . '</h1>';
 <?php
 foreach ($medicaments as $medicament)
 {
-	//echo $this->translate($medicament->molecule);
 ?>
 	<tr>
 	    <td><?php echo $this->escapeHtml($medicament->id); ?></td>
@@ -41,7 +40,13 @@ foreach ($medicaments as $medicament)
 	</tr>
 <?php } ?>
 </table>
-
+<?php
+if(count($medicaments) > 0)
+{
+	echo $this->paginationControl($medicaments, 'sliding', array('partial/paginator.phtml', 'Medicaments'), array('route' => 'medicaments'));
+	echo '<br />';
+}
+?>
 <?php
 // Add new drug
 ?>
