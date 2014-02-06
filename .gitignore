@@ -9,3 +9,5 @@ nbproject
 composer.lock
 vendor/bin
 var/log/debug.log
+
+/var/log/debug.log
