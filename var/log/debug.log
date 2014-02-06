@@ -565,4 +565,21 @@
 2014-02-01T21:13:23+01:00 DEBUG (7): Controller: Medicaments\Controller\IndexController - Action: index - View: index
 2014-02-01T21:13:23+01:00 DEBUG (7): Controller: Medicaments\Controller\IndexController - Action: index - View: index
 2014-02-01T21:13:33+01:00 DEBUG (7): Controller: Medicaments\Controller\IndexController - Action: index - View: index
+<<<<<<< HEAD
 2014-02-06T14:27:02+01:00 DEBUG (7): Controller: Medicaments\Controller\IndexController - Action: index - View: index
+=======
+2014-02-06T00:00:38+01:00 DEBUG (7): Controller: Medicaments\Controller\IndexController - Action: index - View: index
+2014-02-06T00:09:12+01:00 DEBUG (7): Controller: Medicaments\Controller\IndexController - Action: index - View: index
+2014-02-06T00:09:14+01:00 DEBUG (7): Controller: Medicaments\Controller\IndexController - Action: index - View: index
+2014-02-06T00:11:25+01:00 DEBUG (7): Controller: Medicaments\Controller\IndexController - Action: index - View: index
+2014-02-06T00:12:53+01:00 DEBUG (7): Controller: Medicaments\Controller\IndexController - Action: index - View: index
+2014-02-06T00:30:45+01:00 DEBUG (7): Controller: Medicaments\Controller\IndexController - Action: index - View: index
+2014-02-06T13:58:28+01:00 DEBUG (7): Controller: Medicaments\Controller\IndexController - Action: index - View: index
+2014-02-06T13:58:54+01:00 DEBUG (7): Controller: Medicaments\Controller\IndexController - Action: index - View: index
+2014-02-06T14:07:34+01:00 DEBUG (7): Controller: Medicaments\Controller\IndexController - Action: index - View: index
+2014-02-06T14:07:41+01:00 DEBUG (7): Controller: Medicaments\Controller\IndexController - Action: edit - View: edit
+2014-02-06T14:07:44+01:00 DEBUG (7): Controller: Medicaments\Controller\ConfigurationController - Action: index - View: index
+2014-02-06T14:07:45+01:00 DEBUG (7): Controller: Medicaments\Controller\ContactController - Action: index - View: index
+2014-02-06T14:07:48+01:00 DEBUG (7): Controller: Medicaments\Controller\ContactController - Action: index - View: index
+2014-02-06T14:10:18+01:00 DEBUG (7): Controller: Medicaments\Controller\ContactController - Action: index - View: index
+>>>>>>> 72094c1a673aca26d4e933db3f91982daf1687b3
