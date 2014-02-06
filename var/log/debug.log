@@ -578,3 +578,4 @@
 2014-02-06T14:07:44+01:00 DEBUG (7): Controller: Medicaments\Controller\ConfigurationController - Action: index - View: index
 2014-02-06T14:07:45+01:00 DEBUG (7): Controller: Medicaments\Controller\ContactController - Action: index - View: index
 2014-02-06T14:07:48+01:00 DEBUG (7): Controller: Medicaments\Controller\ContactController - Action: index - View: index
+2014-02-06T14:10:18+01:00 DEBUG (7): Controller: Medicaments\Controller\ContactController - Action: index - View: index
