@@ -76,8 +76,11 @@ CREATE TABLE `medicaments` (
 
 INSERT INTO `medicaments` (`id`, `name`, `molecule`, `indications`, `cons_indications`) VALUES
 (1, 'Doliprane (production)', 'Paracétamole', 'Douleurs\r\nFièvre\r\nMaux de tête\r\nDouleurs dentaires\r\nCourbatures\r\nRègles douloureuses', 'Allergie au paracétamol\r\nMaladie grave du foie\r\nAllergie au blé'),
-(2, 'Advil (production)', 'Ibuprofène', 'Affections douloureuses d''intensité légère à modérée et/ou états fébriles\r\nDysménorrhées après recherche étiologique\r\nTraitement de la crise de la migraine légère à modérée, avec ou sans aura\r\nTraitement des douleurs modérées dans l''arthrose (hanche, genou)', 'Au-delà de 24 semaines d''aménorrhée (5 mois de grossesse révolus)\r\nHypersensibilité à l''ibuprofène ou à l''un des excipients du produit\r\nAntécédents d''asthme déclenchés par la prise d''ibuprofène ou de substences d''activité proche telles que: autres AINS, acide acétylsalicylique\r\nInsuffisance hépatique, rénale, cardiaque sévère');
-
+(2, 'Advil (production)', 'Ibuprofène', 'Affections douloureuses d''intensité légère à modérée et/ou états fébriles\r\nDysménorrhées après recherche étiologique\r\nTraitement de la crise de la migraine légère à modérée, avec ou sans aura\r\nTraitement des douleurs modérées dans l''arthrose (hanche, genou)', 'Au-delà de 24 semaines d''aménorrhée (5 mois de grossesse révolus)\r\nHypersensibilité à l''ibuprofène ou à l''un des excipients du produit\r\nAntécédents d''asthme déclenchés par la prise d''ibuprofène ou de substences d''activité proche telles que: autres AINS, acide acétylsalicylique\r\nInsuffisance hépatique, rénale, cardiaque sévère'),
+(3, 'CodéDrill (production)', 'Codéine phosphate hémihydrate', 'Toux d\'irritation', 'p-hydroxybenzoate de méthyle sodique, saccharine sodique, caramel E 150'),
+(4, 'ANTARENE 100 MG CP PELLIC (production)', 'Ibuprofène', 'Toux d\'irritation', 'ANTARENE 100 mg Cpr pell B/40'),
+(5, 'ANTARENE 200 MG  (production)', 'Ibuprofène', 'Toux d\'irritation', 'ANTARENE 200 mg Cpr pell B/40'),
+(6, 'SPIFEN 200 MG CP  (production)', 'Ibuprofène', 'Maux de tête', 'SPIFEN 200 mg Cpr Plq/30');
 
 use projet_zend_dev;
 
