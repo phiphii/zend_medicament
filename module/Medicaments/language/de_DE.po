@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendSkeletonApplication\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-06 19:28+0100\n"
-"PO-Revision-Date: 2014-02-06 19:29+0100\n"
+"POT-Creation-Date: 2014-02-07 08:18+0100\n"
+"PO-Revision-Date: 2014-02-07 08:18+0100\n"
 "Last-Translator: \n"
 "Language-Team: ZF Contributors <zf-devteam@zend.com>\n"
 "Language: de_DE\n"
@@ -23,45 +23,45 @@ msgstr "Senden"
 msgid "Add"
 msgstr "Hinzufügen"
 
-#: ../src/Medicaments/Form/ContactForm.php:26
-#: ../src/Medicaments/Form/MedicamentForm.php:31
+#: ../src/Medicaments/Form/ContactForm.php:27
+#: ../src/Medicaments/Form/MedicamentForm.php:32
 #: ../view/medicaments/index/index.phtml:13
 msgid "Name"
 msgstr "Name"
 
-#: ../src/Medicaments/Form/ContactForm.php:35
+#: ../src/Medicaments/Form/ContactForm.php:37
 msgid "Last name"
 msgstr "Nachname"
 
-#: ../src/Medicaments/Form/ContactForm.php:44
+#: ../src/Medicaments/Form/ContactForm.php:47
 msgid "E-mail"
 msgstr "E-mail"
 
-#: ../src/Medicaments/Form/ContactForm.php:53
+#: ../src/Medicaments/Form/ContactForm.php:57
 msgid "Phone"
 msgstr "Telefon"
 
-#: ../src/Medicaments/Form/ContactForm.php:62 ../view/error/404.phtml:60
+#: ../src/Medicaments/Form/ContactForm.php:67 ../view/error/404.phtml:60
 #: ../view/error/404.phtml:84 ../view/error/index.phtml:15
 #: ../view/error/index.phtml:39
 msgid "Message"
 msgstr "Meldung"
 
-#: ../src/Medicaments/Form/ContactForm.php:67
+#: ../src/Medicaments/Form/ContactForm.php:72
 msgid "captcha"
 msgstr "captcha"
 
-#: ../src/Medicaments/Form/MedicamentForm.php:40
+#: ../src/Medicaments/Form/MedicamentForm.php:42
 #: ../view/medicaments/index/index.phtml:14
 msgid "Molecule"
 msgstr "Molekül"
 
-#: ../src/Medicaments/Form/MedicamentForm.php:49
+#: ../src/Medicaments/Form/MedicamentForm.php:52
 #: ../view/medicaments/index/index.phtml:15
 msgid "Indications"
 msgstr "Indikationen"
 
-#: ../src/Medicaments/Form/MedicamentForm.php:58
+#: ../src/Medicaments/Form/MedicamentForm.php:62
 #: ../view/medicaments/index/index.phtml:16
 msgid "Cons-indications"
 msgstr "Cons-Angaben"
@@ -237,6 +237,10 @@ msgstr "Ja"
 msgid "No"
 msgstr "Nicht"
 
+#: ../view/medicaments/index/edit.phtml:2
+msgid "Edit drug"
+msgstr "Drogen bearbeiten"
+
 #: ../view/medicaments/index/index.phtml:2
 msgid "Drugs list"
 msgstr "Drogen-Liste"
@@ -249,11 +253,11 @@ msgstr "Bearbeiten"
 msgid "Delete"
 msgstr "Iöschen"
 
-#: ../view/partial/paginator.phtml:7 ../view/partial/paginator.phtml:13
+#: ../view/partial/paginator.phtml:9 ../view/partial/paginator.phtml:17
 msgid "Previous"
 msgstr "Früher"
 
-#: ../view/partial/paginator.phtml:36 ../view/partial/paginator.phtml:42
+#: ../view/partial/paginator.phtml:46 ../view/partial/paginator.phtml:54
 msgid "Next"
 msgstr "Nächste"
 
